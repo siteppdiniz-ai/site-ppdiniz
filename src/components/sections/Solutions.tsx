@@ -41,10 +41,10 @@ export function Solutions() {
                     <span className="block text-white font-mate text-2xl lg:text-4xl leading-tight mb-2 font-normal">
                         Nossas
                     </span>
-                    <h2 className="text-5xl md:text-6xl lg:text-8xl font-marcellus font-normal text-[#D4AF37] leading-[1] tracking-normal relative inline-block">
+                    <h2 className="text-5xl md:text-6xl lg:text-8xl font-marcellus font-normal bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent leading-[1.15] pb-2 tracking-normal relative inline-block">
                         SOLUÇÕES
                         {/* Decorative Underline / Mask */}
-                        <div className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-[120%] min-w-[300px] h-[4px] rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+                        <div className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-[120%] min-w-[300px] h-[4px] rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
                     </h2>
                 </div>
 
@@ -60,18 +60,18 @@ export function Solutions() {
                     </button>
 
                     {/* Slider Track Wrapper */}
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden py-10 -my-10">
                         <div
                             className="flex transition-transform duration-700 ease-in-out"
                             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                         >
                             {/* Render groups of 3 for the slide effect */}
                             {Array.from({ length: totalPages }).map((_, pageIndex) => (
-                                <div key={pageIndex} className="min-w-full grid md:grid-cols-3 gap-6 lg:gap-8 px-2">
+                                <div key={pageIndex} className="min-w-full grid md:grid-cols-3 gap-6 lg:gap-8 px-4">
                                     {solutions.slice(pageIndex * itemsPerPage, (pageIndex + 1) * itemsPerPage).map((item, index) => (
                                         <div
                                             key={index}
-                                            className="bg-[#0F1522] border border-[#1E293B] hover:border-[#D4AF37]/50 p-8 md:p-10 rounded-xl transition-all duration-300 group flex flex-col justify-center min-h-[280px] shadow-lg hover:shadow-[#D4AF37]/5"
+                                            className="bg-[#0F1522] border border-[#1E293B] hover:border-[#D4AF37]/50 p-8 md:p-10 rounded-xl transition-all duration-300 group flex flex-col justify-center min-h-[280px] shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_40px_rgba(212,175,55,0.1)] hover:-translate-y-2"
                                         >
                                             <h3 className="text-xl md:text-2xl font-serif text-[#D4AF37] mb-6 leading-tight min-h-[64px] flex items-end pb-2">
                                                 {item.title}

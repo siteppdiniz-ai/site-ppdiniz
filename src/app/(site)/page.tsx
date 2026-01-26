@@ -1,11 +1,13 @@
 import { Hero } from "@/components/sections/Hero";
 import { Solutions } from "@/components/sections/Solutions";
+import { WhoIsFor } from "@/components/sections/WhoIsFor";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Hero />
       <Solutions />
+      <WhoIsFor />
 
       {/* About Teaser Section */}
       <section id="sobre" className="py-24 bg-background">
