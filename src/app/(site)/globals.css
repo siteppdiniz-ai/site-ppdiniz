@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  /* Institutional Palette (Deep Blue & Gold - High Fidelity) */
+  --background: #0B1120;
+  /* Deep Navy (Primary Background) */
+  --foreground: #FFFFFF;
+  /* White (Primary Text) */
+
+  --primary: #D4AF37;
+  /* Metallic Gold (Accent & Buttons) */
+  --primary-foreground: #0B1120;
+  /* Navy text on Gold */
+
+  --secondary: #1A2234;
+  /* Lighter Navy (Cards/Sections) */
+  --secondary-foreground: #FFFFFF;
+
+  --muted: #1A2234;
+  /* Lighter Navy */
+  --muted-foreground: #94A3B8;
+  /* Slate 400 */
+
+  --border: #D4AF37;
+  /* Gold Borders */
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-serif: var(--font-bona-nova-sc), ui-serif, Georgia;
+  --font-tess: var(--font-tess), ui-serif, Georgia;
+  --font-mate: var(--font-mate-sc), serif;
+  --font-marcellus: var(--font-marcellus-sc), serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+}
