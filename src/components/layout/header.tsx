@@ -11,10 +11,10 @@ export function Header() {
 
     const navigation = [
         { name: 'INÍCIO', href: '/' },
-        { name: 'SOBRE NÓS', href: '#sobre' },
-        { name: 'SERVIÇOS', href: '#areas' },
+        { name: 'SOBRE NÓS', href: '/sobre' },
+        { name: 'SERVIÇOS', href: '/servicos' },
         { name: 'BLOG', href: '/blog' },
-        { name: 'CONTATO', href: '#contato' },
+        { name: 'CONTATO', href: '/#contato' },
     ];
 
     return (

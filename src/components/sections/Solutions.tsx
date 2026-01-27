@@ -29,7 +29,7 @@ export function Solutions() {
     // Let's do 2 slides of 3 items.
 
     return (
-        <section className="relative w-full h-[calc(100vh-6rem)] min-h-[700px] flex flex-col items-center justify-center bg-[#0B1120] overflow-hidden">
+        <section id="areas" className="relative w-full h-[calc(100vh-6rem)] min-h-[700px] flex flex-col items-center justify-center bg-[#0B1120] overflow-hidden">
 
             {/* Top Gradient Separator */}
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-50" />

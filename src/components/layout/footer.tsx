@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export function Footer() {
     return (
-        <footer className="bg-[#0B1120] text-gray-400 border-t border-[#D4AF37]/30">
+        <footer id="contato" className="bg-[#0B1120] text-gray-400 border-t border-[#D4AF37]/30">
             <div className="container mx-auto px-4 md:px-6 py-12 lg:py-16">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
 
@@ -34,7 +34,7 @@ export function Footer() {
                         <ul className="space-y-2 font-tess text-base md:text-lg">
                             {services.map((item, idx) => (
                                 <li key={idx}>
-                                    <Link href="#" className="hover:text-white transition-colors">
+                                    <Link href="/servicos" className="hover:text-white transition-colors">
                                         {item}
                                     </Link>
                                 </li>
