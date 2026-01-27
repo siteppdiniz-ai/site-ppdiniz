@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function AboutHistory() {
     return (
@@ -16,33 +17,43 @@ export function AboutHistory() {
 
                 {/* Content */}
                 <div className="space-y-3 md:space-y-4 font-tess text-sm md:text-base text-gray-300 font-light leading-relaxed text-left flex-1">
-                    <p>
-                        Pedro Paulo A. Diniz é contador, especialista em Gestão Financeira, Controladoria e Auditoria; Gestão Empresarial e Inovação. Atualmente mestrando em contabilidade e administração. Sua trajetória profissional começou em 1990, quando iniciou sua carreira na contabilidade. Em 1996, fundou a Revit, sua primeira empresa de assessoria contábil, que se consolidou como referência no setor.
-                    </p>
+                    <ScrollReveal direction="left" delay={0.2}>
+                        <p>
+                            Pedro Paulo A. Diniz é contador, especialista em Gestão Financeira, Controladoria e Auditoria; Gestão Empresarial e Inovação. Atualmente mestrando em contabilidade e administração. Sua trajetória profissional começou em 1990, quando iniciou sua carreira na contabilidade. Em 1996, fundou a Revit, sua primeira empresa de assessoria contábil, que se consolidou como referência no setor.
+                        </p>
+                    </ScrollReveal>
 
-                    <p>
-                        Em 2014, assumiu o cargo de Diretor Financeiro em uma Distribuidora de Alimentos no Nordeste, onde ampliou sua visão sobre gestão estratégica e consolidou ainda mais sua expertise no setor empresarial.
-                    </p>
+                    <ScrollReveal direction="left" delay={0.3}>
+                        <p>
+                            Em 2014, assumiu o cargo de Diretor Financeiro em uma Distribuidora de Alimentos no Nordeste, onde ampliou sua visão sobre gestão estratégica e consolidou ainda mais sua expertise no setor empresarial.
+                        </p>
+                    </ScrollReveal>
 
-                    <p>
-                        Após cinco anos, decidiu empreender novamente, desta vez no ramo de consultoria empresarial. Em 2019, com a Revit já consolidada, fundou a PP Diniz Consultoria, enxergando uma grande oportunidade de contribuir com as empresas no processo de estruturar sua Gestão Financeira e Tributária, para crescerem com mais solidez e eficiência.
-                    </p>
+                    <ScrollReveal direction="left" delay={0.4}>
+                        <p>
+                            Após cinco anos, decidiu empreender novamente, desta vez no ramo de consultoria empresarial. Em 2019, com a Revit já consolidada, fundou a PP Diniz Consultoria, enxergando uma grande oportunidade de contribuir com as empresas no processo de estruturar sua Gestão Financeira e Tributária, para crescerem com mais solidez e eficiência.
+                        </p>
+                    </ScrollReveal>
 
-                    <p>
-                        Hoje, à frente da PP Diniz Consultoria, ele e sua equipe auxiliam empresas na superação de desafios e na conquista de resultados concretos, oferecendo soluções estratégicas para crescimento sustentável, redução de custos e tributário com segurança jurídica.
-                    </p>
+                    <ScrollReveal direction="left" delay={0.5}>
+                        <p>
+                            Hoje, à frente da PP Diniz Consultoria, ele e sua equipe auxiliam empresas na superação de desafios e na conquista de resultados concretos, oferecendo soluções estratégicas para crescimento sustentável, redução de custos e tributário com segurança jurídica.
+                        </p>
+                    </ScrollReveal>
 
-                    <p className="border-l-2 border-[#D4AF37]/50 pl-6 text-white font-normal italic">
-                        Se sua empresa enfrenta dificuldades como falta de organização financeira, carga tributária elevada ou desafios para crescer de forma estruturada, a PP Diniz Consultoria pode ajudar. Entre em contato e descubra como transformar sua gestão empresarial com estratégias eficientes e seguras.
-                    </p>
+                    <ScrollReveal direction="up" delay={0.6}>
+                        <p className="border-l-2 border-[#D4AF37]/50 pl-6 text-white font-normal italic">
+                            Se sua empresa enfrenta dificuldades como falta de organização financeira, carga tributária elevada ou desafios para crescer de forma estruturada, a PP Diniz Consultoria pode ajudar. Entre em contato e descubra como transformar sua gestão empresarial com estratégias eficientes e seguras.
+                        </p>
+                    </ScrollReveal>
 
-                    <div className="pt-6">
+                    <ScrollReveal direction="up" delay={0.8} className="pt-6">
                         <Link href="/contato">
                             <button className="px-8 py-3 bg-[#B78E45] hover:bg-[#D4AF37] text-black font-serif font-bold text-base rounded-sm shadow-lg hover:shadow-[#D4AF37]/20 transition-all duration-300 uppercase tracking-widest">
                                 Fale com um especialista
                             </button>
                         </Link>
-                    </div>
+                    </ScrollReveal>
                 </div>
 
             </div>

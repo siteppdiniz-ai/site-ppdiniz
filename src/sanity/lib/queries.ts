@@ -20,3 +20,8 @@ export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]{
   "author": author->{name, image, bio},
   "categories": categories[]->title
 }`;
+
+export const CATEGORIES_QUERY = groq`*[_type == "category"] {
+  title,
+  description
+}`;

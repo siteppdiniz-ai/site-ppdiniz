@@ -45,6 +45,13 @@ export default defineType({
             type: 'datetime',
         }),
         defineField({
+            name: 'excerpt',
+            title: 'Excerpt',
+            type: 'text',
+            rows: 3,
+            description: 'A brief summary of the post for the blog listing cards.',
+        }),
+        defineField({
             name: 'body',
             title: 'Body',
             type: 'array',
@@ -61,9 +68,6 @@ export default defineType({
                     be they blind, color-blind, low-sighted; 
                     alternative text is of great help for those 
                     people that can write it on you.`,
-                            options: {
-                                isHighlighted: true
-                            }
                         }
                     ]
                 }

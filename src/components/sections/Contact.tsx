@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function Contact() {
     return (
@@ -9,8 +10,8 @@ export function Contact() {
             {/* Top Gradient Separator */}
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-50" />
 
-            <div className="container max-w-6xl px-4 md:px-6 relative z-10">
-                <div className="relative bg-[#0F1522]/80 border border-[#D4AF37]/20 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl backdrop-blur-sm">
+            <div className="container max-w-7xl px-4 md:px-6 relative z-10">
+                <ScrollReveal width="100%" direction="up" delay={0.2} className="relative bg-[#0F1522]/80 border border-[#D4AF37]/20 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl backdrop-blur-sm">
                     <div className="flex flex-col md:flex-row min-h-[450px] lg:min-h-[550px]">
 
                         {/* Left Side: Form */}
@@ -78,16 +79,16 @@ export function Contact() {
                                 src="/assets/contact-image.png"
                                 alt="Fale Conosco PPDiniz"
                                 fill
-                                className="object-cover opacity-60"
+                                className="object-cover opacity-70"
                             />
                             {/* Blueish Gradient Overlay */}
-                            <div className="absolute inset-0 bg-[#0B1120]/40 mix-blend-multiply" />
+                            <div className="absolute inset-0 bg-[#0B1120]/30 mix-blend-multiply" />
                             <div className="absolute inset-0 bg-gradient-to-tr from-[#0B1120] via-[#1E293B]/20 to-[#312E81]/30" />
                             {/* Seamless mix with left side */}
                             <div className="absolute inset-0 bg-gradient-to-r from-[#0F1522] via-transparent to-transparent" />
                         </div>
                     </div>
-                </div>
+                </ScrollReveal>
             </div>
 
             {/* Bottom Gradient Separator */}

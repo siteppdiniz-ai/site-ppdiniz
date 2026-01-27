@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { ShoppingCart, LayoutGrid, Building2, Lightbulb } from "lucide-react";
 import Image from "next/image";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function AboutPhilosophy() {
     const [activeHover, setActiveHover] = useState<number | null>(null);
@@ -15,35 +16,42 @@ export function AboutPhilosophy() {
 
                 {/* Top Cards: Mission, Vision, Purpose */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 w-full">
-                    <PhilosophyCard
-                        title="MISSÃO:"
-                        content="Tenha todas as informações e controles por meio de plataforma tecnológica"
-                    />
-                    <PhilosophyCard
-                        title="VISÃO:"
-                        content="Planos de consultoria sob medida para a realidade da sua empresa e da sua equipe."
-                    />
-                    <PhilosophyCard
-                        title="PROPÓSITO:"
-                        content="Respeito à cultura da empresa, com propostas flexíveis e adaptadas."
-                    />
+                    <ScrollReveal direction="up" delay={0.1} className="h-full">
+                        <PhilosophyCard
+                            title="MISSÃO:"
+                            content="Tenha todas as informações e controles por meio de plataforma tecnológica"
+                        />
+                    </ScrollReveal>
+                    <ScrollReveal direction="up" delay={0.2} className="h-full">
+                        <PhilosophyCard
+                            title="VISÃO:"
+                            content="Planos de consultoria sob medida para a realidade da sua empresa e da sua equipe."
+                        />
+                    </ScrollReveal>
+                    <ScrollReveal direction="up" delay={0.3} className="h-full">
+                        <PhilosophyCard
+                            title="PROPÓSITO:"
+                            content="Respeito à cultura da empresa, com propostas flexíveis e adaptadas."
+                        />
+                    </ScrollReveal>
                 </div>
 
                 {/* Values Card - Single centered */}
                 <div className="w-full max-w-2xl mb-24 lg:mb-32">
-                    <PhilosophyCard
-                        title="VALORES:"
-                        content="Acreditar que o compartilhamento de ideias, conhecimento e tecnologia, considerando as competências individuais, nos levarão mais longe!"
-                        isWide
-                    />
+                    <ScrollReveal direction="up" delay={0.4}>
+                        <PhilosophyCard
+                            title="VALORES:"
+                            content="Acreditar que o compartilhamento de ideias, conhecimento e tecnologia, considerando as competências individuais, nos levarão mais longe!"
+                            isWide
+                        />
+                    </ScrollReveal>
                 </div>
 
                 {/* Infographic Section */}
                 <div className="relative w-full max-w-5xl flex flex-col items-center py-20 overflow-visible">
 
                     {/* Main Infographic Container - Responsive Aspect Ratio (Reduced Size) */}
-                    <div className="relative w-[280px] h-[140px] md:w-[420px] md:h-[210px] lg:w-[560px] lg:h-[280px] flex justify-center mt-12 md:mt-20 z-20">
-
+                    <ScrollReveal direction="up" delay={0.2} className="relative w-[280px] h-[140px] md:w-[420px] md:h-[210px] lg:w-[560px] lg:h-[280px] flex justify-center mt-12 md:mt-20 z-20">
                         {/* 1. SVG Pie Slices (The Fan) with Embedded Icons */}
                         <svg viewBox="0 0 200 100" className="absolute top-0 left-0 w-full h-full overflow-visible drop-shadow-2xl">
                             <defs>
@@ -146,71 +154,83 @@ export function AboutPhilosophy() {
                             </div>
                         </div>
 
-                    </div>
+                    </ScrollReveal>
 
                     {/* Strategic Information Boxes below the Infographic */}
                     {/* Strategic Boxes Grid */}
                     <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-4 px-4 mt-0 md:mt-2 lg:mt-4 overflow-visible z-10">
 
                         {/* Box 1 (Outer Left) */}
-                        <div
-                            className="relative flex justify-center mt-0 md:mt-4 cursor-pointer"
-                            onMouseEnter={() => setActiveHover(0)}
-                            onMouseLeave={() => setActiveHover(null)}
+                        <ScrollReveal direction="up" delay={0.4} className="relative flex justify-center mt-0 md:mt-4 cursor-pointer"
                         >
-                            {/* Line connects to Slice 1 */}
-                            <div className={`hidden md:block absolute bottom-full left-1/2 w-16 md:w-32 lg:w-48 h-[188px] border-l-[3px] border-t-[3px] rounded-tl-[3rem] transition-all duration-300 origin-bottom-left ${activeHover === 0 ? "border-[#D4AF37] scale-y-105" : "border-[#D4AF37]/80"
-                                }`} />
-                            <StrategicBox
-                                text="EXPERIÊNCIA EM EMPRESAS DO VAREJO, DO ATACADO E DA INDÚSTRIA"
-                                isActive={activeHover === 0}
-                            />
-                        </div>
+                            <div
+                                onMouseEnter={() => setActiveHover(0)}
+                                onMouseLeave={() => setActiveHover(null)}
+                                className="w-full flex justify-center"
+                            >
+                                {/* Line connects to Slice 1 */}
+                                <div className={`hidden md:block absolute bottom-full left-1/2 w-16 md:w-32 lg:w-48 h-[188px] border-l-[3px] border-t-[3px] rounded-tl-[3rem] transition-all duration-300 origin-bottom-left ${activeHover === 0 ? "border-[#D4AF37] scale-y-105" : "border-[#D4AF37]/80"
+                                    }`} />
+                                <StrategicBox
+                                    text="EXPERIÊNCIA EM EMPRESAS DO VAREJO, DO ATACADO E DA INDÚSTRIA"
+                                    isActive={activeHover === 0}
+                                />
+                            </div>
+                        </ScrollReveal>
 
                         {/* Box 2 (Inner Left) */}
-                        <div
-                            className="relative flex justify-center mt-8 md:mt-16 lg:mt-20 cursor-pointer"
-                            onMouseEnter={() => setActiveHover(1)}
-                            onMouseLeave={() => setActiveHover(null)}
+                        <ScrollReveal direction="up" delay={0.5} className="relative flex justify-center mt-8 md:mt-16 lg:mt-20 cursor-pointer"
                         >
-                            {/* Line connects to Slice 2 */}
-                            <div className={`hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 w-[3px] h-[140px] transition-all duration-300 origin-bottom ${activeHover === 1 ? "bg-[#D4AF37] scale-y-105" : "bg-[#D4AF37]/80"
-                                }`} />
-                            <StrategicBox
-                                text="METODOLOGIA PERSONALIZADA PARA CADA NEGÓCIO"
-                                isActive={activeHover === 1}
-                            />
-                        </div>
+                            <div
+                                onMouseEnter={() => setActiveHover(1)}
+                                onMouseLeave={() => setActiveHover(null)}
+                                className="w-full flex justify-center"
+                            >
+                                {/* Line connects to Slice 2 */}
+                                <div className={`hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 w-[3px] h-[140px] transition-all duration-300 origin-bottom ${activeHover === 1 ? "bg-[#D4AF37] scale-y-105" : "bg-[#D4AF37]/80"
+                                    }`} />
+                                <StrategicBox
+                                    text="METODOLOGIA PERSONALIZADA PARA CADA NEGÓCIO"
+                                    isActive={activeHover === 1}
+                                />
+                            </div>
+                        </ScrollReveal>
 
                         {/* Box 3 (Inner Right) */}
-                        <div
-                            className="relative flex justify-center mt-8 md:mt-16 lg:mt-20 cursor-pointer"
-                            onMouseEnter={() => setActiveHover(2)}
-                            onMouseLeave={() => setActiveHover(null)}
+                        <ScrollReveal direction="up" delay={0.6} className="relative flex justify-center mt-8 md:mt-16 lg:mt-20 cursor-pointer"
                         >
-                            {/* Line connects to Slice 3 */}
-                            <div className={`hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 w-[3px] h-[140px] transition-all duration-300 origin-bottom ${activeHover === 2 ? "bg-[#D4AF37] scale-y-105" : "bg-[#D4AF37]/80"
-                                }`} />
-                            <StrategicBox
-                                text="ESPECIALISTAS EM MÉDIAS E GRANDES EMPRESAS"
-                                isActive={activeHover === 2}
-                            />
-                        </div>
+                            <div
+                                onMouseEnter={() => setActiveHover(2)}
+                                onMouseLeave={() => setActiveHover(null)}
+                                className="w-full flex justify-center"
+                            >
+                                {/* Line connects to Slice 3 */}
+                                <div className={`hidden md:block absolute bottom-full left-1/2 -translate-x-1/2 w-[3px] h-[140px] transition-all duration-300 origin-bottom ${activeHover === 2 ? "bg-[#D4AF37] scale-y-105" : "bg-[#D4AF37]/80"
+                                    }`} />
+                                <StrategicBox
+                                    text="ESPECIALISTAS EM MÉDIAS E GRANDES EMPRESAS"
+                                    isActive={activeHover === 2}
+                                />
+                            </div>
+                        </ScrollReveal>
 
                         {/* Box 4 (Outer Right) */}
-                        <div
-                            className="relative flex justify-center mt-0 md:mt-4 cursor-pointer"
-                            onMouseEnter={() => setActiveHover(3)}
-                            onMouseLeave={() => setActiveHover(null)}
+                        <ScrollReveal direction="up" delay={0.7} className="relative flex justify-center mt-0 md:mt-4 cursor-pointer"
                         >
-                            {/* Line connects to Slice 4 */}
-                            <div className={`hidden md:block absolute bottom-full right-1/2 w-16 md:w-32 lg:w-48 h-[188px] border-r-[3px] border-t-[3px] rounded-tr-[3rem] transition-all duration-300 origin-bottom-right ${activeHover === 3 ? "border-[#D4AF37] scale-y-105" : "border-[#D4AF37]/80"
-                                }`} />
-                            <StrategicBox
-                                text="CONSULTORIA PRÁTICA E SEM BUROCRACIA"
-                                isActive={activeHover === 3}
-                            />
-                        </div>
+                            <div
+                                onMouseEnter={() => setActiveHover(3)}
+                                onMouseLeave={() => setActiveHover(null)}
+                                className="w-full flex justify-center"
+                            >
+                                {/* Line connects to Slice 4 */}
+                                <div className={`hidden md:block absolute bottom-full right-1/2 w-16 md:w-32 lg:w-48 h-[188px] border-r-[3px] border-t-[3px] rounded-tr-[3rem] transition-all duration-300 origin-bottom-right ${activeHover === 3 ? "border-[#D4AF37] scale-y-105" : "border-[#D4AF37]/80"
+                                    }`} />
+                                <StrategicBox
+                                    text="CONSULTORIA PRÁTICA E SEM BUROCRACIA"
+                                    isActive={activeHover === 3}
+                                />
+                            </div>
+                        </ScrollReveal>
 
                     </div>
 

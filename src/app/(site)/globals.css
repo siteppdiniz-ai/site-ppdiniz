@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* Institutional Palette (Deep Blue & Gold - High Fidelity) */
   --background: #0B1120;
