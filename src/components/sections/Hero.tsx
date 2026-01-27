@@ -43,9 +43,11 @@ export function Hero() {
               </div>
 
               <div className="pt-2">
-                <Button className="h-12 px-8 text-base font-medium bg-[#D4AF37] text-[#0B1120] hover:bg-[#b08d26] rounded-sm transition-all shadow-lg hover:shadow-[#D4AF37]/20 w-full sm:w-auto">
-                  Entre em contato agora.
-                </Button>
+                <Link href="/contato">
+                  <Button className="h-12 px-8 text-base font-medium bg-[#D4AF37] text-[#0B1120] hover:bg-[#b08d26] rounded-sm transition-all shadow-lg hover:shadow-[#D4AF37]/20 w-full sm:w-auto">
+                    Entre em contato agora.
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

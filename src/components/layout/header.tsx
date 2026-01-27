@@ -14,7 +14,7 @@ export function Header() {
         { name: 'SOBRE NÓS', href: '/sobre' },
         { name: 'SERVIÇOS', href: '/servicos' },
         { name: 'BLOG', href: '/blog' },
-        { name: 'CONTATO', href: '/#contato' },
+        { name: 'CONTATO', href: '/contato' },
     ];
 
     return (
@@ -79,7 +79,9 @@ export function Header() {
                             </Link>
                         ))}
                         <div className="pt-4">
-                            <Button className="w-full">Fale Conosco</Button>
+                            <Link href="/contato" onClick={() => setIsMenuOpen(false)}>
+                                <Button className="w-full">Fale Conosco</Button>
+                            </Link>
                         </div>
                     </div>
                 </div>

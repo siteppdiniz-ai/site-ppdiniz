@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Testimonials() {
     return (
         <section className="relative w-full h-[calc(100vh-6rem)] min-h-[700px] flex flex-col items-center justify-center bg-[#0B1120] overflow-hidden">
@@ -35,9 +37,11 @@ export function Testimonials() {
                 </div>
 
                 {/* CTA Button */}
-                <button className="mt-10 px-8 py-3 bg-[#B78E45] hover:bg-[#D4AF37] text-black font-serif font-bold text-base md:text-lg rounded-sm shadow-lg hover:shadow-[#D4AF37]/20 transition-all duration-300 uppercase tracking-wider">
-                    Entre em contato agora.
-                </button>
+                <Link href="/contato">
+                    <button className="mt-10 px-8 py-3 bg-[#B78E45] hover:bg-[#D4AF37] text-black font-serif font-bold text-base md:text-lg rounded-sm shadow-lg hover:shadow-[#D4AF37]/20 transition-all duration-300 uppercase tracking-wider">
+                        Entre em contato agora.
+                    </button>
+                </Link>
 
             </div>
 

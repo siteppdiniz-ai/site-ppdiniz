@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function AboutHistory() {
     return (
         <section className="relative w-full h-[calc(100vh-6rem)] pt-4 md:pt-8 flex flex-col items-center bg-[#0B1120] overflow-hidden">
@@ -33,6 +35,14 @@ export function AboutHistory() {
                     <p className="border-l-2 border-[#D4AF37]/50 pl-6 text-white font-normal italic">
                         Se sua empresa enfrenta dificuldades como falta de organização financeira, carga tributária elevada ou desafios para crescer de forma estruturada, a PP Diniz Consultoria pode ajudar. Entre em contato e descubra como transformar sua gestão empresarial com estratégias eficientes e seguras.
                     </p>
+
+                    <div className="pt-6">
+                        <Link href="/contato">
+                            <button className="px-8 py-3 bg-[#B78E45] hover:bg-[#D4AF37] text-black font-serif font-bold text-base rounded-sm shadow-lg hover:shadow-[#D4AF37]/20 transition-all duration-300 uppercase tracking-widest">
+                                Fale com um especialista
+                            </button>
+                        </Link>
+                    </div>
                 </div>
 
             </div>
