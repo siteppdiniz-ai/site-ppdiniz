@@ -9,26 +9,26 @@ export function AboutPhilosophy() {
     const [activeHover, setActiveHover] = useState<number | null>(null);
 
     return (
-        <section className="relative w-full py-20 lg:py-32 flex flex-col items-center bg-[#0B1120] overflow-hidden">
+        <section className="relative w-full h-auto py-20 lg:py-32 flex flex-col items-center bg-[#0B1120] overflow-visible">
 
             {/* Container */}
             <div className="container max-w-6xl px-4 md:px-6 relative z-10 flex flex-col items-center">
 
                 {/* Top Cards: Mission, Vision, Purpose */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 w-full">
-                    <ScrollReveal direction="up" delay={0.1} className="h-full">
+                    <ScrollReveal direction="up" delay={0.1} className="h-full" overflow="visible">
                         <PhilosophyCard
                             title="MISSÃO:"
                             content="Tenha todas as informações e controles por meio de plataforma tecnológica"
                         />
                     </ScrollReveal>
-                    <ScrollReveal direction="up" delay={0.2} className="h-full">
+                    <ScrollReveal direction="up" delay={0.2} className="h-full" overflow="visible">
                         <PhilosophyCard
                             title="VISÃO:"
                             content="Planos de consultoria sob medida para a realidade da sua empresa e da sua equipe."
                         />
                     </ScrollReveal>
-                    <ScrollReveal direction="up" delay={0.3} className="h-full">
+                    <ScrollReveal direction="up" delay={0.3} className="h-full" overflow="visible">
                         <PhilosophyCard
                             title="PROPÓSITO:"
                             content="Respeito à cultura da empresa, com propostas flexíveis e adaptadas."
@@ -38,7 +38,7 @@ export function AboutPhilosophy() {
 
                 {/* Values Card - Single centered */}
                 <div className="w-full max-w-2xl mb-24 lg:mb-32">
-                    <ScrollReveal direction="up" delay={0.4}>
+                    <ScrollReveal direction="up" delay={0.4} overflow="visible">
                         <PhilosophyCard
                             title="VALORES:"
                             content="Acreditar que o compartilhamento de ideias, conhecimento e tecnologia, considerando as competências individuais, nos levarão mais longe!"
@@ -51,15 +51,15 @@ export function AboutPhilosophy() {
                 <div className="relative w-full max-w-5xl flex flex-col items-center py-20 overflow-visible">
 
                     {/* Main Infographic Container - Responsive Aspect Ratio (Reduced Size) */}
-                    <ScrollReveal direction="up" delay={0.2} className="relative w-[280px] h-[140px] md:w-[420px] md:h-[210px] lg:w-[560px] lg:h-[280px] flex justify-center mt-12 md:mt-20 z-20">
+                    <div className="relative w-[280px] h-[140px] md:w-[420px] md:h-[210px] lg:w-[560px] lg:h-[280px] flex justify-center mt-12 md:mt-20 z-20">
                         {/* 1. SVG Pie Slices (The Fan) with Embedded Icons */}
                         <svg viewBox="0 0 200 100" className="absolute top-0 left-0 w-full h-full overflow-visible drop-shadow-2xl">
                             <defs>
-                                <linearGradient id="gold1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <linearGradient id="philo-gold1" x1="0%" y1="0%" x2="100%" y2="100%">
                                     <stop offset="0%" stopColor="#8B6B2B" />
                                     <stop offset="100%" stopColor="#D4AF37" />
                                 </linearGradient>
-                                <linearGradient id="gold2" x1="0%" y1="100%" x2="100%" y2="0%">
+                                <linearGradient id="philo-gold2" x1="0%" y1="100%" x2="100%" y2="0%">
                                     <stop offset="0%" stopColor="#695227" />
                                     <stop offset="100%" stopColor="#B78E45" />
                                 </linearGradient>
@@ -74,7 +74,7 @@ export function AboutPhilosophy() {
                                 {/* Slice with gap */}
                                 <path
                                     d="M 98 2 L 2 2 A 96 96 0 0 0 30 70 Z"
-                                    fill="url(#gold1)"
+                                    fill="#B78E45"
                                 />
                                 {/* Embedded Icon - Centered based on provided margins */}
                                 <image
@@ -93,7 +93,7 @@ export function AboutPhilosophy() {
                                 {/* Slice with gap */}
                                 <path
                                     d="M 98 2 L 32 72 A 96 96 0 0 0 98 98 Z"
-                                    fill="url(#gold2)"
+                                    fill="#D4AF37"
                                 />
                                 {/* Embedded Icon - Centered based on mirrored coords */}
                                 <image
@@ -112,7 +112,7 @@ export function AboutPhilosophy() {
                                 {/* Slice with gap */}
                                 <path
                                     d="M 102 2 L 102 98 A 96 96 0 0 0 168 72 Z"
-                                    fill="url(#gold2)"
+                                    fill="#D4AF37"
                                 />
                                 {/* Embedded Icon - Centered based on mirrored coords */}
                                 <image
@@ -131,7 +131,7 @@ export function AboutPhilosophy() {
                                 {/* Slice with gap */}
                                 <path
                                     d="M 102 2 L 170 70 A 96 96 0 0 0 198 2 Z"
-                                    fill="url(#gold1)"
+                                    fill="#B78E45"
                                 />
                                 {/* Embedded Icon - Centered based on mirrored coords */}
                                 <image
@@ -154,14 +154,14 @@ export function AboutPhilosophy() {
                             </div>
                         </div>
 
-                    </ScrollReveal>
+                    </div>
 
                     {/* Strategic Information Boxes below the Infographic */}
                     {/* Strategic Boxes Grid */}
                     <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-4 px-4 mt-0 md:mt-2 lg:mt-4 overflow-visible z-10">
 
                         {/* Box 1 (Outer Left) */}
-                        <ScrollReveal direction="up" delay={0.4} className="relative flex justify-center mt-0 md:mt-4 cursor-pointer"
+                        <ScrollReveal direction="up" delay={0.4} className="relative flex justify-center mt-0 md:mt-4 cursor-pointer" overflow="visible"
                         >
                             <div
                                 onMouseEnter={() => setActiveHover(0)}
@@ -179,7 +179,7 @@ export function AboutPhilosophy() {
                         </ScrollReveal>
 
                         {/* Box 2 (Inner Left) */}
-                        <ScrollReveal direction="up" delay={0.5} className="relative flex justify-center mt-8 md:mt-16 lg:mt-20 cursor-pointer"
+                        <ScrollReveal direction="up" delay={0.5} className="relative flex justify-center mt-8 md:mt-16 lg:mt-20 cursor-pointer" overflow="visible"
                         >
                             <div
                                 onMouseEnter={() => setActiveHover(1)}
@@ -197,7 +197,7 @@ export function AboutPhilosophy() {
                         </ScrollReveal>
 
                         {/* Box 3 (Inner Right) */}
-                        <ScrollReveal direction="up" delay={0.6} className="relative flex justify-center mt-8 md:mt-16 lg:mt-20 cursor-pointer"
+                        <ScrollReveal direction="up" delay={0.6} className="relative flex justify-center mt-8 md:mt-16 lg:mt-20 cursor-pointer" overflow="visible"
                         >
                             <div
                                 onMouseEnter={() => setActiveHover(2)}
@@ -215,7 +215,7 @@ export function AboutPhilosophy() {
                         </ScrollReveal>
 
                         {/* Box 4 (Outer Right) */}
-                        <ScrollReveal direction="up" delay={0.7} className="relative flex justify-center mt-0 md:mt-4 cursor-pointer"
+                        <ScrollReveal direction="up" delay={0.7} className="relative flex justify-center mt-0 md:mt-4 cursor-pointer" overflow="visible"
                         >
                             <div
                                 onMouseEnter={() => setActiveHover(3)}

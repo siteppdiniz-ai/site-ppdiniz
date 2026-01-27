@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function WhoIsFor() {
     return (
-        <section className="relative w-full h-[calc(100vh-6rem)] min-h-[700px] flex flex-col items-center pt-16 md:pt-24 lg:pt-32 bg-[#0B1120] overflow-hidden">
+        <section className="relative w-full h-auto min-h-[700px] lg:h-[calc(100vh-6rem)] flex flex-col items-center pt-16 md:pt-24 lg:pt-32 bg-[#0B1120] overflow-hidden py-12 lg:pb-0">
 
             {/* Container */}
             <div className="container px-4 md:px-6 relative z-10 flex flex-col items-center">

@@ -8,12 +8,11 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative w-full h-[calc(100vh-6rem)] min-h-[600px] flex items-center overflow-hidden bg-[#0B1120]">
+    <section className="relative w-full lg:h-[calc(100vh-6rem)] min-h-[calc(100vh-6rem)] flex items-center overflow-hidden bg-[#0B1120] py-8 lg:py-0">
       <div className="container relative z-10 px-4 md:px-6 h-full">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center h-full">
-          {/* Text Content - Compacted for Viewport Fit */}
-          {/* Text Content with Vertical Divider */}
-          <div className="flex gap-6 lg:gap-8 items-stretch">
+          {/* Text Content */}
+          <div className="flex gap-6 lg:gap-8 items-stretch lg:pt-0">
             {/* Decorative Divider */}
             <ScrollReveal direction="down" duration={1} delay={0.2} className="hidden lg:flex flex-col items-center pt-2">
               <div className="w-[1px] bg-[#D4AF37] h-[140px]" style={{ background: 'linear-gradient(to bottom, transparent, #D4AF37 10%, #D4AF37)' }} />
@@ -65,14 +64,14 @@ export function Hero() {
           </div>
 
           {/* Hero Image Composition - Scaled Down for Harmony */}
-          <div className="relative h-full w-full flex items-center justify-center lg:justify-end max-h-[80vh]">
+          <div className="relative w-full flex items-center justify-center lg:justify-end h-[350px] lg:h-full lg:max-h-[80vh] mt-8 lg:mt-0">
 
             {/* Outline Shape Layer (Back) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
-              className="absolute bottom-0 right-0 lg:right-[10px] w-[420px] h-[520px] z-0 opacity-100"
+              className="absolute bottom-0 right-1/2 translate-x-1/2 lg:translate-x-0 lg:right-[10px] w-[280px] md:w-[320px] lg:w-[420px] h-[350px] md:h-[400px] lg:h-[520px] z-0 opacity-100"
             >
               <Image
                 src="/assets/hero/shape-outline.png"
@@ -88,7 +87,7 @@ export function Hero() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-              className="absolute bottom-0 right-0 lg:right-[30px] w-[390px] h-[490px] z-0"
+              className="absolute bottom-0 right-1/2 translate-x-1/2 lg:translate-x-0 lg:right-[30px] w-[260px] md:w-[290px] lg:w-[390px] h-[330px] md:h-[380px] lg:h-[490px] z-0"
             >
               <Image
                 src="/assets/hero/shape-blue-filled.png"
@@ -104,7 +103,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-              className="relative z-10 w-full h-full max-w-[380px] flex items-end justify-center lg:justify-end"
+              className="relative z-10 w-full h-full max-w-[250px] md:max-w-[280px] lg:max-w-[380px] flex items-end justify-center lg:justify-end"
             >
               <Image
                 src="/assets/hero/portrait.png"
@@ -121,7 +120,7 @@ export function Hero() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2, type: "spring" }}
               whileHover={{ scale: 1.05 }}
-              className="absolute bottom-12 left-6 lg:left-12 z-20 w-[200px] h-[110px]"
+              className="absolute bottom-8 lg:bottom-12 left-4 md:left-2 lg:left-12 z-20 w-[140px] md:w-[160px] lg:w-[200px] h-[80px] md:h-[90px] lg:h-[110px]"
             >
               {/* Card Background Image */}
               <div className="absolute inset-0 w-full h-full drop-shadow-2xl">

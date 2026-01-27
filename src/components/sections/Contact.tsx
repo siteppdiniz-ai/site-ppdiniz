@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function Contact() {
     return (
-        <section className="relative w-full min-h-[calc(100vh-6rem)] flex flex-col items-center justify-center bg-[#0B1120] py-8 md:py-12 overflow-hidden">
+        <section className="relative w-full h-auto min-h-[calc(100vh-6rem)] flex flex-col items-center justify-center bg-[#0B1120] py-12 md:py-12 overflow-hidden">
             {/* Top Gradient Separator */}
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-50" />
 
@@ -26,7 +26,7 @@ export function Contact() {
                                     <input
                                         type="text"
                                         id="name"
-                                        className="w-full bg-[#0B1120] border border-[#1E293B] rounded-lg px-3 py-2 text-sm text-white focus:border-[#D4AF37]/50 outline-none transition-colors font-tess"
+                                        className="w-full bg-[#0B1120] border border-[#1E293B] rounded-lg px-3 py-2 text-base text-white focus:border-[#D4AF37]/50 outline-none transition-colors font-tess"
                                     />
                                 </div>
                                 <div className="space-y-1.5">
@@ -34,7 +34,7 @@ export function Contact() {
                                     <input
                                         type="email"
                                         id="email"
-                                        className="w-full bg-[#0B1120] border border-[#1E293B] rounded-lg px-3 py-2 text-sm text-white focus:border-[#D4AF37]/50 outline-none transition-colors font-tess"
+                                        className="w-full bg-[#0B1120] border border-[#1E293B] rounded-lg px-3 py-2 text-base text-white focus:border-[#D4AF37]/50 outline-none transition-colors font-tess"
                                     />
                                 </div>
                                 <div className="space-y-1.5">
@@ -42,7 +42,7 @@ export function Contact() {
                                     <input
                                         type="tel"
                                         id="phone"
-                                        className="w-full bg-[#0B1120] border border-[#1E293B] rounded-lg px-3 py-2 text-sm text-white focus:border-[#D4AF37]/50 outline-none transition-colors font-tess"
+                                        className="w-full bg-[#0B1120] border border-[#1E293B] rounded-lg px-3 py-2 text-base text-white focus:border-[#D4AF37]/50 outline-none transition-colors font-tess"
                                     />
                                 </div>
                                 <div className="space-y-1.5">
@@ -50,7 +50,7 @@ export function Contact() {
                                     <input
                                         type="text"
                                         id="subject"
-                                        className="w-full bg-[#0B1120] border border-[#1E293B] rounded-lg px-3 py-2 text-sm text-white focus:border-[#D4AF37]/50 outline-none transition-colors font-tess"
+                                        className="w-full bg-[#0B1120] border border-[#1E293B] rounded-lg px-3 py-2 text-base text-white focus:border-[#D4AF37]/50 outline-none transition-colors font-tess"
                                     />
                                 </div>
                                 <div className="md:col-span-2 space-y-1.5">
@@ -58,7 +58,7 @@ export function Contact() {
                                     <textarea
                                         id="message"
                                         rows={3}
-                                        className="w-full bg-[#0B1120] border border-[#1E293B] rounded-lg px-3 py-2 text-sm text-white focus:border-[#D4AF37]/50 outline-none transition-colors font-tess resize-none"
+                                        className="w-full bg-[#0B1120] border border-[#1E293B] rounded-lg px-3 py-2 text-base text-white focus:border-[#D4AF37]/50 outline-none transition-colors font-tess resize-none"
                                     ></textarea>
                                 </div>
 

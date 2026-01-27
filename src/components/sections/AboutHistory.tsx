@@ -3,14 +3,14 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function AboutHistory() {
     return (
-        <section className="relative w-full h-[calc(100vh-6rem)] pt-4 md:pt-8 flex flex-col items-center bg-[#0B1120] overflow-hidden">
+        <section className="relative w-full min-h-[calc(100vh-6rem)] lg:h-[calc(100vh-6rem)] h-auto pt-8 md:pt-8 flex flex-col items-center bg-[#0B1120] overflow-hidden py-12 lg:py-0">
 
             {/* Container */}
             <div className="container max-w-3xl px-4 md:px-6 relative z-10 flex flex-col items-start h-full pb-8">
 
                 {/* Title */}
-                <h2 className="text-xl md:text-3xl font-marcellus bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent tracking-wide mb-6 relative leading-tight pb-2">
-                    COMO NASCEU A PP DINIZ
+                <h2 className="text-2xl md:text-4xl font-marcellus bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent tracking-wide mb-6 relative leading-tight pb-2">
+                    COMO NASCEU A PPDINIZ
                     {/* Decorative Underline / Mask */}
                     <div className="absolute left-0 -bottom-1 w-[80%] h-[2px] rounded-full bg-gradient-to-r from-[#D4AF37] via-[#D4AF37] to-transparent opacity-80" />
                 </h2>

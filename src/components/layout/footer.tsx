@@ -76,13 +76,17 @@ export function Footer() {
             {/* Bottom Bar */}
             <div className="border-t border-white/10 py-6">
                 <div className="container mx-auto px-4 md:px-6 flex flex-col items-center gap-4 text-center">
-                    <div className="flex flex-wrap justify-center gap-x-2 gap-y-1 text-sm md:text-base opacity-80">
+                    <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm md:text-base opacity-80">
                         <span>&copy; {new Date().getFullYear()} PPDINIZ Consultoria</span>
                         <span className="hidden md:inline">|</span>
                         <span>todos os direitos reservados.</span>
-                        <span className="mx-1">-</span>
-                        <Link href="#" className="hover:text-[#D4AF37] underline underline-offset-4 decoration-[#D4AF37]/30">
+                        <span className="hidden md:inline">|</span>
+                        <Link href="/politica-privacidade" className="hover:text-[#D4AF37] underline underline-offset-4 decoration-[#D4AF37]/30">
                             Política de Privacidade
+                        </Link>
+                        <span className="hidden md:inline">|</span>
+                        <Link href="/politica-cookies" className="hover:text-[#D4AF37] underline underline-offset-4 decoration-[#D4AF37]/30">
+                            Política de Cookies
                         </Link>
                     </div>
                     <Link
