@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export function WhoIsFor() {
     return (
-        <section className="relative w-full h-auto min-h-[700px] lg:h-[calc(100vh-6rem)] flex flex-col items-center pt-16 md:pt-24 lg:pt-32 bg-[#0B1120] overflow-hidden py-12 lg:pb-0">
+        <section className="relative w-full h-auto flex flex-col items-center pt-8 pb-16 md:pt-16 lg:pt-20 bg-[#0B1120] overflow-hidden lg:pb-16">
 
             {/* Container */}
             <div className="container px-4 md:px-6 relative z-10 flex flex-col items-center">
 
                 {/* Title */}
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-marcellus bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent text-center tracking-wide mb-16 relative leading-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-marcellus bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent text-center tracking-wide mb-8 md:mb-12 relative leading-tight px-4">
                     PARA QUEM É A PPDiniz
                     {/* Decorative Underline / Mask */}
                     <div className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-[110%] min-w-[300px] h-[4px] rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-80" />
@@ -19,8 +19,8 @@ export function WhoIsFor() {
                 <div className="relative mb-10 lg:mb-12">
                     {/* Ribbon Background Shape */}
                     <div className="absolute inset-0 bg-[#B78E45] rounded-tl-[40px] rounded-br-[40px] shadow-lg opacity-90" />
-                    <div className="relative px-8 py-2 md:px-12 md:py-3">
-                        <p className="text-[#0B1120] font-serif font-bold text-base md:text-xl tracking-wide text-center">
+                    <div className="relative px-6 py-3 md:px-12 md:py-3">
+                        <p className="text-[#0B1120] font-serif font-bold text-lg md:text-xl tracking-wide text-center leading-tight">
                             Se você percebe que sua empresa...
                         </p>
                     </div>
@@ -30,7 +30,7 @@ export function WhoIsFor() {
                 <div className="flex flex-wrap justify-center gap-4 max-w-6xl w-full">
 
                     {/* Top Row (3 items) */}
-                    <div className="flex flex-wrap justify-center gap-4 w-full">
+                    <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 w-full">
                         {items.slice(0, 3).map((item, index) => (
                             <Card key={index} text={item.text} />
                         ))}
@@ -55,8 +55,8 @@ export function WhoIsFor() {
 
 function Card({ text }: { text: string }) {
     return (
-        <div className="bg-[#B78E45] hover:bg-[#D4AF37] transition-colors duration-300 rounded-xl px-4 py-4 md:px-6 md:py-5 flex items-center gap-4 w-full md:w-[320px] min-h-[100px] shadow-lg group cursor-default border border-[#B78E45]">
-            <div className="shrink-0 relative w-8 h-8 md:w-10 md:h-10">
+        <div className="bg-[#B78E45] hover:bg-[#D4AF37] transition-colors duration-300 rounded-xl px-5 py-5 md:px-5 md:py-4 flex items-center gap-4 w-full md:w-[280px] lg:w-[310px] min-h-[100px] lg:min-h-[110px] shadow-lg group cursor-default border border-[#B78E45]">
+            <div className="shrink-0 relative w-10 h-10 md:w-8 md:h-8">
                 <Image
                     src="/assets/icon-message-x.png"
                     alt="Icon"
@@ -64,7 +64,7 @@ function Card({ text }: { text: string }) {
                     className="object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                 />
             </div>
-            <p className="text-[#0B1120] font-medium text-sm md:text-base leading-snug">
+            <p className="text-[#0B1120] font-medium text-base md:text-sm lg:text-base leading-tight">
                 {text}
             </p>
         </div>

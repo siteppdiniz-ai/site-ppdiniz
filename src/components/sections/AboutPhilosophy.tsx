@@ -9,7 +9,7 @@ export function AboutPhilosophy() {
     const [activeHover, setActiveHover] = useState<number | null>(null);
 
     return (
-        <section className="relative w-full h-auto py-20 lg:py-32 flex flex-col items-center bg-[#0B1120] overflow-visible">
+        <section className="relative w-full h-auto py-16 md:py-24 lg:py-20 flex flex-col items-center bg-[#0B1120] overflow-visible">
 
             {/* Container */}
             <div className="container max-w-6xl px-4 md:px-6 relative z-10 flex flex-col items-center">
@@ -37,7 +37,7 @@ export function AboutPhilosophy() {
                 </div>
 
                 {/* Values Card - Single centered */}
-                <div className="w-full max-w-2xl mb-24 lg:mb-32">
+                <div className="w-full max-w-2xl mb-16 lg:mb-24">
                     <ScrollReveal direction="up" delay={0.4} overflow="visible">
                         <PhilosophyCard
                             title="VALORES:"
@@ -48,10 +48,10 @@ export function AboutPhilosophy() {
                 </div>
 
                 {/* Infographic Section */}
-                <div className="relative w-full max-w-5xl flex flex-col items-center py-20 overflow-visible">
+                <div className="relative w-full max-w-5xl flex flex-col items-center py-10 lg:py-20 overflow-visible">
 
                     {/* Main Infographic Container - Responsive Aspect Ratio (Reduced Size) */}
-                    <div className="relative w-[280px] h-[140px] md:w-[420px] md:h-[210px] lg:w-[560px] lg:h-[280px] flex justify-center mt-12 md:mt-20 z-20">
+                    <div className="relative w-[280px] h-[140px] md:w-[420px] md:h-[210px] lg:w-[560px] lg:h-[280px] flex justify-center mt-6 md:mt-20 z-20">
                         {/* 1. SVG Pie Slices (The Fan) with Embedded Icons */}
                         <svg viewBox="0 0 200 100" className="absolute top-0 left-0 w-full h-full overflow-visible drop-shadow-2xl">
                             <defs>
@@ -158,7 +158,7 @@ export function AboutPhilosophy() {
 
                     {/* Strategic Information Boxes below the Infographic */}
                     {/* Strategic Boxes Grid */}
-                    <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-4 px-4 mt-0 md:mt-2 lg:mt-4 overflow-visible z-10">
+                    <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-4 px-4 mt-8 md:mt-2 lg:mt-4 overflow-visible z-10 place-items-center">
 
                         {/* Box 1 (Outer Left) */}
                         <ScrollReveal direction="up" delay={0.4} className="relative flex justify-center mt-0 md:mt-4 cursor-pointer" overflow="visible"
@@ -179,7 +179,7 @@ export function AboutPhilosophy() {
                         </ScrollReveal>
 
                         {/* Box 2 (Inner Left) */}
-                        <ScrollReveal direction="up" delay={0.5} className="relative flex justify-center mt-8 md:mt-16 lg:mt-20 cursor-pointer" overflow="visible"
+                        <ScrollReveal direction="up" delay={0.5} className="relative flex justify-center mt-0 md:mt-16 lg:mt-20 cursor-pointer" overflow="visible"
                         >
                             <div
                                 onMouseEnter={() => setActiveHover(1)}
@@ -197,7 +197,7 @@ export function AboutPhilosophy() {
                         </ScrollReveal>
 
                         {/* Box 3 (Inner Right) */}
-                        <ScrollReveal direction="up" delay={0.6} className="relative flex justify-center mt-8 md:mt-16 lg:mt-20 cursor-pointer" overflow="visible"
+                        <ScrollReveal direction="up" delay={0.6} className="relative flex justify-center mt-0 md:mt-16 lg:mt-20 cursor-pointer" overflow="visible"
                         >
                             <div
                                 onMouseEnter={() => setActiveHover(2)}

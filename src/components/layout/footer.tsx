@@ -1,6 +1,10 @@
 import Link from 'next/link';
+import { client } from "@/sanity/lib/client";
+import { LATEST_POSTS_QUERY } from "@/sanity/lib/queries";
 
-export function Footer() {
+export async function Footer() {
+    const posts = await client.fetch(LATEST_POSTS_QUERY);
+
     return (
         <footer id="contato" className="bg-[#0B1120] text-gray-400 border-t border-[#D4AF37]/30">
             <div className="container mx-auto px-4 md:px-6 py-12 lg:py-16">
@@ -60,13 +64,17 @@ export function Footer() {
                             Últimas Notícias
                         </h3>
                         <ul className="space-y-4 font-tess text-base md:text-lg lg:text-base">
-                            {news.map((item, idx) => (
-                                <li key={idx} className="leading-snug">
-                                    <Link href="#" className="hover:text-white transition-colors">
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
+                            {posts && posts.length > 0 ? (
+                                posts.map((post: any) => (
+                                    <li key={post._id} className="leading-snug">
+                                        <Link href={`/blog/${post.slug.current}`} className="hover:text-white transition-colors line-clamp-2">
+                                            {post.title}
+                                        </Link>
+                                    </li>
+                                ))
+                            ) : (
+                                <li className="italic opacity-50">Nenhuma notícia encontrada</li>
+                            )}
                         </ul>
                     </div>
 
@@ -89,13 +97,6 @@ export function Footer() {
                             Política de Cookies
                         </Link>
                     </div>
-                    <Link
-                        href="https://contaplena.com.br"
-                        target="_blank"
-                        className="text-sm md:text-base font-medium hover:text-white transition-colors opacity-60"
-                    >
-                        By <span className="underline underline-offset-4 decoration-[#D4AF37]/50">Conta Plena</span>
-                    </Link>
                 </div>
             </div>
         </footer>
@@ -111,8 +112,3 @@ const services = [
     "Gestão de Estoque"
 ]
 
-const news = [
-    "Período da Declaração do Imposto de Renda 2025",
-    "Como a Reforma Tributária impacta as Holdings? O que você precisa saber",
-    "Declaração de Criptomoedas no Imposto de Renda 2025: Tudo o que você precisa saber"
-]

@@ -3,6 +3,7 @@ import { Solutions } from "@/components/sections/Solutions";
 import { WhoIsFor } from "@/components/sections/WhoIsFor";
 import { HowWeHelp } from "@/components/sections/HowWeHelp";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { LatestNews } from "@/components/sections/LatestNews";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <WhoIsFor />
       <HowWeHelp />
       <Testimonials />
+      <LatestNews />
     </div>
   );
 }
