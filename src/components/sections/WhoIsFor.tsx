@@ -1,5 +1,6 @@
 import { FileX, AlertTriangle } from "lucide-react";
 import Image from "next/image";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function WhoIsFor() {
     return (
@@ -9,22 +10,28 @@ export function WhoIsFor() {
             <div className="container px-4 md:px-6 relative z-10 flex flex-col items-center">
 
                 {/* Title */}
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-marcellus bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent text-center tracking-wide mb-8 md:mb-12 relative leading-tight px-4">
-                    PARA QUEM É A PPDiniz
-                    {/* Decorative Underline / Mask */}
-                    <div className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-[110%] min-w-[300px] h-[4px] rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-80" />
-                </h2>
+                <ScrollReveal direction="down" duration={0.8}>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-marcellus bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent text-center tracking-wide mb-8 md:mb-12 relative leading-tight px-4">
+                        PARA QUEM É A PPDiniz
+                        {/* Decorative Underline / Mask */}
+                        <div className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-[110%] min-w-[300px] h-[4px] rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-80" />
+                    </h2>
+                </ScrollReveal>
 
                 {/* Subtitle / Banner */}
-                <div className="relative mb-10 lg:mb-12">
-                    {/* Ribbon Background Shape */}
-                    <div className="absolute inset-0 bg-[#B78E45] rounded-tl-[40px] rounded-br-[40px] shadow-lg opacity-90" />
-                    <div className="relative px-6 py-3 md:px-12 md:py-3">
-                        <p className="text-[#0B1120] font-serif font-bold text-lg md:text-xl tracking-wide text-center leading-tight">
-                            Se você percebe que sua empresa...
-                        </p>
+                <ScrollReveal direction="left" delay={0.2} width="100%">
+                    <div className="relative mb-10 lg:mb-12 flex justify-center w-full">
+                        <div className="relative inline-block">
+                            {/* Ribbon Background Shape */}
+                            <div className="absolute inset-0 bg-[#B78E45] rounded-tl-[40px] rounded-br-[40px] shadow-lg opacity-90" />
+                            <div className="relative px-6 py-3 md:px-12 md:py-3">
+                                <p className="text-[#0B1120] font-serif font-bold text-lg md:text-xl tracking-wide text-center leading-tight">
+                                    Se você percebe que sua empresa...
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </ScrollReveal>
 
                 {/* Cards Grid */}
                 <div className="flex flex-wrap justify-center gap-4 max-w-6xl w-full">
@@ -32,14 +39,18 @@ export function WhoIsFor() {
                     {/* Top Row (3 items) */}
                     <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 w-full">
                         {items.slice(0, 3).map((item, index) => (
-                            <Card key={index} text={item.text} />
+                            <ScrollReveal key={index} direction="up" delay={0.3 + (index * 0.15)} width="fit-content">
+                                <Card text={item.text} />
+                            </ScrollReveal>
                         ))}
                     </div>
 
                     {/* Bottom Row (2 items) - Centered */}
                     <div className="flex flex-wrap justify-center gap-4 w-full">
                         {items.slice(3, 5).map((item, index) => (
-                            <Card key={index + 3} text={item.text} />
+                            <ScrollReveal key={index + 3} direction="up" delay={0.75 + (index * 0.15)} width="fit-content">
+                                <Card text={item.text} />
+                            </ScrollReveal>
                         ))}
                     </div>
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function HowWeHelp() {
     return (
@@ -8,42 +9,45 @@ export function HowWeHelp() {
             <div className="container px-4 md:px-6 relative z-10 flex flex-col items-center">
 
                 {/* Title */}
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-marcellus bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent text-center tracking-wide mb-10 relative leading-tight pb-2">
-                    NÓS PODEMOS TE AJUDAR!
-                    {/* Decorative Underline / Mask */}
-                    <div className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-[110%] min-w-[300px] h-[4px] rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
-                </h2>
+                <ScrollReveal direction="down" duration={0.8}>
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-marcellus bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent text-center tracking-wide mb-10 relative leading-tight pb-2">
+                        NÓS PODEMOS TE AJUDAR!
+                        {/* Decorative Underline / Mask */}
+                        <div className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-[110%] min-w-[300px] h-[4px] rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+                    </h2>
+                </ScrollReveal>
 
                 {/* Cards Grid - Vertical Stack */}
                 <div className="flex flex-col gap-4 w-full max-w-4xl">
                     {cards.map((card, index) => (
-                        <div
-                            key={index}
-                            className="relative bg-[#0F1522] border border-[#1E293B] rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-6 hover:border-[#D4AF37] transition-all duration-300 group shadow-lg"
-                        >
-                            {/* Icon Container */}
-                            <div className="shrink-0 relative w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
-                                <Image
-                                    src={card.icon}
-                                    alt={card.title}
-                                    fill
-                                    className="object-contain"
-                                />
-                            </div>
+                        <ScrollReveal key={index} direction="up" delay={index * 0.2} width="100%">
+                            <div
+                                className="relative bg-[#0F1522] border border-[#1E293B] rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-6 hover:border-[#D4AF37] transition-all duration-300 group shadow-lg"
+                            >
+                                {/* Icon Container */}
+                                <div className="shrink-0 relative w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
+                                    <Image
+                                        src={card.icon}
+                                        alt={card.title}
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
 
-                            {/* Content */}
-                            <div className="flex flex-col text-center md:text-left gap-2 relative flex-1">
-                                {/* Vertical Line for Desktop */}
-                                <div className="hidden md:block absolute left-[-1.5rem] top-1 bottom-1 w-[1px] bg-[#1E293B] group-hover:bg-[#D4AF37]/50 transition-colors" />
+                                {/* Content */}
+                                <div className="flex flex-col text-center md:text-left gap-2 relative flex-1">
+                                    {/* Vertical Line for Desktop */}
+                                    <div className="hidden md:block absolute left-[-1.5rem] top-1 bottom-1 w-[1px] bg-[#1E293B] group-hover:bg-[#D4AF37]/50 transition-colors" />
 
-                                <h3 className="text-[#D4AF37] font-marcellus text-lg md:text-xl tracking-wide">
-                                    {card.title}
-                                </h3>
-                                <p className="text-gray-300 font-tess text-base md:text-lg font-light leading-relaxed">
-                                    {card.description}
-                                </p>
+                                    <h3 className="text-[#D4AF37] font-marcellus text-lg md:text-xl tracking-wide">
+                                        {card.title}
+                                    </h3>
+                                    <p className="text-gray-300 font-tess text-base md:text-lg font-light leading-relaxed">
+                                        {card.description}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
                     ))}
                 </div>
 

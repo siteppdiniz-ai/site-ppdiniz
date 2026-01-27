@@ -9,11 +9,13 @@ export function AboutHistory() {
             <div className="container max-w-3xl px-4 md:px-6 relative z-10 flex flex-col items-start h-full pb-8">
 
                 {/* Title */}
-                <h2 className="text-2xl md:text-4xl font-marcellus bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent tracking-wide mb-6 relative leading-tight pb-2">
-                    COMO NASCEU A PPDINIZ
-                    {/* Decorative Underline / Mask */}
-                    <div className="absolute left-0 -bottom-1 w-[80%] h-[2px] rounded-full bg-gradient-to-r from-[#D4AF37] via-[#D4AF37] to-transparent opacity-80" />
-                </h2>
+                <ScrollReveal direction="down" duration={0.8}>
+                    <h2 className="text-2xl md:text-4xl font-marcellus bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent tracking-wide mb-6 relative leading-tight pb-2">
+                        COMO NASCEU A PPDINIZ
+                        {/* Decorative Underline / Mask */}
+                        <div className="absolute left-0 -bottom-1 w-[80%] h-[2px] rounded-full bg-gradient-to-r from-[#D4AF37] via-[#D4AF37] to-transparent opacity-80" />
+                    </h2>
+                </ScrollReveal>
 
                 {/* Content */}
                 <div className="space-y-3 md:space-y-4 font-tess text-sm md:text-base text-gray-300 font-light leading-relaxed text-left flex-1">

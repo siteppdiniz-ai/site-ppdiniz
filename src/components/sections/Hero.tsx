@@ -8,19 +8,27 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative w-full lg:h-[calc(100vh-6rem)] min-h-[calc(100vh-6rem)] flex items-center overflow-hidden bg-[#0B1120] py-8 lg:py-0">
+    <section className="relative w-full min-h-[500px] lg:min-h-[calc(100vh-6rem)] flex items-center overflow-hidden bg-[#0B1120] py-4 lg:py-0">
       <div className="container relative z-10 px-4 md:px-6 h-full">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center h-full">
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-16 items-start lg:items-center h-full">
           {/* Text Content */}
-          <div className="flex gap-6 lg:gap-8 items-stretch lg:pt-0">
+          <div className="flex gap-4 md:gap-8 items-stretch pt-0 lg:pt-0 relative z-10">
             {/* Decorative Divider */}
-            <ScrollReveal direction="down" duration={1} delay={0.2} className="hidden lg:flex flex-col items-center pt-2">
-              <div className="w-[1px] bg-[#D4AF37] h-[140px]" style={{ background: 'linear-gradient(to bottom, transparent, #D4AF37 10%, #D4AF37)' }} />
-              <div className="w-2.5 h-2.5 bg-[#D4AF37] rotate-45 my-4 shrink-0" />
-              <div className="w-[1px] bg-[#D4AF37] flex-1 min-h-[100px]" style={{ background: 'linear-gradient(to top, transparent, #D4AF37 10%, #D4AF37)' }} />
+            <ScrollReveal
+              direction="down"
+              duration={1}
+              delay={0.2}
+              className="flex flex-col items-center pt-2"
+              innerClassName="flex flex-col items-center h-full"
+              height="100%"
+              overflow="visible"
+            >
+              <div className="w-[1px] bg-[#D4AF37] h-[100px] md:h-[140px]" style={{ background: 'linear-gradient(to bottom, transparent, #D4AF37 10%, #D4AF37)' }} />
+              <div className="w-2 md:w-2.5 h-2 md:h-2.5 bg-[#D4AF37] rotate-45 my-4 shrink-0" />
+              <div className="w-[1px] bg-[#D4AF37] flex-1 min-h-[150px] md:min-h-[200px]" style={{ background: 'linear-gradient(to top, transparent, #D4AF37 10%, #D4AF37)' }} />
             </ScrollReveal>
 
-            <div className="space-y-8 flex flex-col py-2">
+            <div className="space-y-4 md:space-y-8 flex flex-col py-2">
               <div className="space-y-2">
                 <ScrollReveal direction="left" delay={0.3}>
                   <h1
@@ -33,7 +41,7 @@ export function Hero() {
                 </ScrollReveal>
               </div>
 
-              <div className="space-y-6 text-base lg:text-lg text-gray-300 font-tess leading-relaxed max-w-lg font-light">
+              <div className="space-y-4 md:space-y-6 text-base lg:text-lg text-gray-300 font-tess leading-relaxed max-w-lg font-light">
                 <ScrollReveal direction="left" delay={0.5}>
                   <p>
                     Com uma estrutura empresarial bem definida e um planejamento tributário e financeiro eficiente, o seu negócio cresce de forma segura e sustentável.
@@ -63,15 +71,15 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Hero Image Composition - Scaled Down for Harmony */}
-          <div className="relative w-full flex items-center justify-center lg:justify-end h-[350px] lg:h-full lg:max-h-[80vh] mt-8 lg:mt-0">
+          {/* Hero Image Composition - Professional Overlap for Mobile */}
+          <div className="absolute lg:relative bottom-0 right-0 w-full lg:w-auto h-[400px] md:h-[500px] lg:h-full lg:max-h-[80vh] z-0 opacity-40 lg:opacity-100 flex items-end justify-end pointer-events-none lg:pointer-events-auto">
 
             {/* Outline Shape Layer (Back) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
-              className="absolute bottom-0 right-1/2 translate-x-1/2 lg:translate-x-0 lg:right-[10px] w-[280px] md:w-[320px] lg:w-[420px] h-[350px] md:h-[400px] lg:h-[520px] z-0 opacity-100"
+              className="absolute bottom-0 right-[-40px] lg:right-[10px] w-[300px] md:w-[400px] lg:w-[420px] h-[350px] md:h-[500px] lg:h-[520px] z-0 opacity-30 lg:opacity-100"
             >
               <Image
                 src="/assets/hero/shape-outline.png"
@@ -87,7 +95,7 @@ export function Hero() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-              className="absolute bottom-0 right-1/2 translate-x-1/2 lg:translate-x-0 lg:right-[30px] w-[260px] md:w-[290px] lg:w-[390px] h-[330px] md:h-[380px] lg:h-[490px] z-0"
+              className="absolute bottom-0 right-[-20px] lg:right-[30px] w-[280px] md:w-[380px] lg:w-[390px] h-[330px] md:h-[480px] lg:h-[490px] z-0 opacity-20 lg:opacity-100"
             >
               <Image
                 src="/assets/hero/shape-blue-filled.png"
@@ -103,7 +111,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-              className="relative z-10 w-full h-full max-w-[250px] md:max-w-[280px] lg:max-w-[380px] flex items-end justify-center lg:justify-end"
+              className="relative z-10 w-full h-full max-w-[300px] md:max-w-[400px] lg:max-w-[380px] flex items-end justify-end translate-x-8 lg:translate-x-0"
             >
               <Image
                 src="/assets/hero/portrait.png"
@@ -114,13 +122,13 @@ export function Hero() {
               />
             </motion.div>
 
-            {/* Floating Logo Card (Card BG + Logo) */}
+            {/* Floating Logo Card */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2, type: "spring" }}
               whileHover={{ scale: 1.05 }}
-              className="absolute bottom-8 lg:bottom-12 left-4 md:left-2 lg:left-12 z-20 w-[140px] md:w-[160px] lg:w-[200px] h-[80px] md:h-[90px] lg:h-[110px]"
+              className="absolute bottom-8 lg:bottom-12 right-4 lg:right-auto lg:left-12 z-20 w-[110px] md:w-[180px] lg:w-[200px] h-[65px] md:h-[100px] lg:h-[110px]"
             >
               {/* Card Background Image */}
               <div className="absolute inset-0 w-full h-full drop-shadow-2xl">

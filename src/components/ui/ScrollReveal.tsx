@@ -14,6 +14,8 @@ interface ScrollRevealProps {
     threshold?: number;
     once?: boolean;
     overflow?: "hidden" | "visible";
+    innerClassName?: string;
+    height?: string;
 }
 
 export const ScrollReveal = ({
@@ -27,6 +29,8 @@ export const ScrollReveal = ({
     threshold = 0.3,
     once = true,
     overflow = "hidden",
+    innerClassName = "",
+    height = "auto",
 }: ScrollRevealProps) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once, amount: threshold });
@@ -47,8 +51,9 @@ export const ScrollReveal = ({
     };
 
     return (
-        <div ref={ref} style={{ width, overflow }} className={className}>
+        <div ref={ref} style={{ width, overflow, height }} className={className}>
             <motion.div
+                className={innerClassName}
                 variants={{
                     hidden: getHiddenVariant(),
                     visible: { opacity: 1, x: 0, y: 0 },
