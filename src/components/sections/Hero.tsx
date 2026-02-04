@@ -8,8 +8,144 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[500px] lg:min-h-[calc(100vh-6rem)] flex items-center overflow-hidden bg-[#0B1120] py-4 lg:py-0">
-      <div className="container relative z-10 px-4 md:px-6 h-full">
+    <section className="relative w-full min-h-screen lg:min-h-[calc(100vh-6rem)] flex items-center overflow-hidden bg-[#0B1120] py-0 lg:py-0">
+
+      {/* =========================================
+          MOBILE LAYOUT (< 1024px)
+          ========================================= */}
+      <div className="lg:hidden w-full flex flex-col relative z-10 pt-8 pb-12 overflow-x-hidden">
+
+        {/* Top Section: Image + Title + CTA */}
+        {/* Restored balanced padding (pl-4 pr-1) to avoid "too left" feeling */}
+        <div className="pl-4 pr-1 flex flex-row items-center gap-3 mb-4 w-full">
+
+          {/* Container for Cutout + Background Shapes */}
+          <div className="relative w-[42%] h-[240px] shrink-0 flex items-end justify-center">
+
+            {/* BACKGROUND SHAPE GROUP - Shifted RIGHT together */}
+            <div className="absolute inset-0 z-0">
+              {/* 1. Outline Shape (Back) - Moved LEFT */}
+              <div className="absolute bottom-0 -right-10 w-[200px] h-[260px] opacity-100 mix-blend-normal">
+                <Image
+                  src="/assets/hero/shape-outline.png"
+                  alt="Background Outline"
+                  fill
+                  className="object-contain object-bottom"
+                />
+              </div>
+              {/* 2. Filled Shape (Middle) - Aligned relative to Outline to form 'X' */}
+              <div className="absolute bottom-0 -right-8 w-[190px] h-[240px] opacity-100">
+                <Image
+                  src="/assets/hero/shape-blue-filled.png"
+                  alt="Background Shape"
+                  fill
+                  className="object-contain object-bottom"
+                />
+              </div>
+            </div>
+
+            {/* 3. Portrait Cutout (Front) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative z-10 w-full h-[110%]"
+            >
+              <Image
+                src="/assets/hero/portrait.png"
+                alt="Dr. Diniz"
+                fill
+                className="object-contain object-bottom drop-shadow-2xl"
+                priority
+              />
+            </motion.div>
+          </div>
+
+          {/* Title + CTA Column */}
+          {/* Adjusted padding top to align better visually with face */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex-1 z-20 flex flex-col items-start min-w-0 pt-8"
+          >
+            <h1 className="font-serif leading-[1.15] tracking-wide w-full">
+              {/* Unified Typography - All same size */}
+              <span className="block text-[#D4AF37] font-bold mb-1.5 text-2xl tracking-widest uppercase whitespace-nowrap">EMPRESA QUE</span>
+              <span className="block text-[#D4AF37] font-bold text-2xl mb-0.5 whitespace-nowrap">SE GOVERNA,</span>
+              <span className="block text-[#D4AF37] font-bold text-2xl whitespace-nowrap">DURA MAIS.</span>
+            </h1>
+
+            {/* CTA Button - Below text */}
+            <div className="mt-4 w-full">
+              <Link href="/contato" className="block w-full max-w-[130px]">
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="relative w-full h-12 bg-[#0F172A]/90 border border-blue-900/30 rounded-lg shadow-lg flex items-center justify-center overflow-hidden group hover:border-[#D4AF37]/50 transition-colors backdrop-blur-sm"
+                >
+                  <Image
+                    src="/assets/hero/logo-gold.png"
+                    alt="PP Diniz"
+                    width={70}
+                    height={22}
+                    className="object-contain w-auto h-7 opacity-100"
+                  />
+                </motion.div>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Gold Divider Strip with complex shape */}
+        <div className="relative w-[110%] -ml-6 h-[8px] bg-[#D4AF37] mb-8 shadow-[0_0_20px_rgba(212,175,55,0.2)] flex items-center mt-2">
+          <div className="container mx-auto px-6 relative h-full flex items-center">
+            {/* The 'bar in the middle' effect - slightly lighter overlay */}
+            <div className="w-[40%] h-[2px] bg-[#FFDB99] opacity-70 absolute left-6 top-1/2 -translate-y-1/2 rounded-full" />
+          </div>
+
+          {/* Right side decorative polygon - Same gold as bar */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 h-[30px] w-24 bg-[#D4AF37] shadow-lg origin-center rotate-3" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)' }}></div>
+        </div>
+
+        {/* Text Content */}
+        <div className="px-6 flex flex-row gap-4 relative">
+
+          {/* Vertical Gold Line Decor */}
+          <div className="w-[1px] bg-gradient-to-b from-[#D4AF37] via-[#D4AF37] to-transparent shrink-0 relative h-auto min-h-[180px] mt-1 opacity-60">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-[#D4AF37] rotate-45" />
+          </div>
+
+          {/* Paragraphs */}
+          <div className="space-y-4 text-gray-300 font-tess text-[15px] font-light leading-relaxed text-justify pb-8">
+            <ScrollReveal direction="left" delay={0.6} width="100%" overflow="visible">
+              <p>
+                Com uma estrutura empresarial bem definida e um planejamento tributário e financeiro eficiente, o seu negócio cresce de forma segura e sustentável.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal direction="left" delay={0.7} width="100%" overflow="visible">
+              <p>
+                Na PP Diniz Consultoria, eu e minha equipe construímos com as médias empresas as estruturas necessárias para enfrentar desafios, melhorar a gestão e alavancar resultados.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal direction="left" delay={0.8} width="100%" overflow="visible">
+              <p>
+                A sua empresa vai conquistar mais economia tributária, proteção patrimonial, relatórios e análises precisas para a tomada de decisão, que trazem clareza sobre o valor do negócio e mostram o crescimento real.
+              </p>
+            </ScrollReveal>
+          </div>
+        </div>
+
+      </div>
+
+
+      {/* =========================================
+          DESKTOP LAYOUT (>= 1024px)
+          ========================================= */}
+      <div className="hidden lg:block container relative z-10 px-4 md:px-6 h-full py-4 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-16 items-start lg:items-center h-full">
           {/* Text Content */}
           <div className="flex gap-4 md:gap-8 items-stretch pt-0 lg:pt-0 relative z-10">
@@ -86,7 +222,6 @@ export function Hero() {
                 alt="Background Outline"
                 fill
                 className="object-contain object-bottom"
-                priority
               />
             </motion.div>
 
@@ -102,7 +237,6 @@ export function Hero() {
                 alt="Background Shape"
                 fill
                 className="object-contain object-bottom"
-                priority
               />
             </motion.div>
 

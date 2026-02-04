@@ -44,7 +44,7 @@ export function Solutions() {
 
                 {/* Header Section */}
                 <div className="text-center mb-8 lg:mb-16 relative flex flex-col items-center">
-                    <ScrollReveal direction="down" duration={0.8} width="100%" className="flex flex-col items-center">
+                    <ScrollReveal direction="down" duration={0.8} width="100%" className="flex flex-col items-center" overflow="visible">
                         <span className="block text-white font-mate text-2xl lg:text-4xl leading-tight mb-2 font-normal">
                             Nossas
                         </span>
