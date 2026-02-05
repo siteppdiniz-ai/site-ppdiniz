@@ -10,7 +10,7 @@ export function HowWeHelp() {
 
                 {/* Title */}
                 <ScrollReveal direction="down" duration={0.8}>
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-marcellus bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent text-center tracking-wide mb-10 relative leading-tight pb-2">
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-normal bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent text-center tracking-wide mb-10 relative leading-tight pb-2">
                         NÓS PODEMOS TE AJUDAR!
                         {/* Decorative Underline / Mask */}
                         <div className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-[110%] min-w-[300px] h-[4px] rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
@@ -22,7 +22,7 @@ export function HowWeHelp() {
                     {cards.map((card, index) => (
                         <ScrollReveal key={index} direction="up" delay={index * 0.2} width="100%">
                             <div
-                                className="relative bg-[#0F1522] border border-[#1E293B] rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-6 hover:border-[#D4AF37] transition-all duration-300 group shadow-lg"
+                                className="relative bg-[#0F1522] border border-[#1E293B] rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-8 hover:border-[#D4AF37] transition-all duration-300 group shadow-lg"
                             >
                                 {/* Icon Container */}
                                 <div className="shrink-0 relative w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
@@ -37,9 +37,9 @@ export function HowWeHelp() {
                                 {/* Content */}
                                 <div className="flex flex-col text-center md:text-left gap-2 relative flex-1">
                                     {/* Vertical Line for Desktop */}
-                                    <div className="hidden md:block absolute left-[-1.5rem] top-1 bottom-1 w-[1px] bg-[#1E293B] group-hover:bg-[#D4AF37]/50 transition-colors" />
+                                    <div className="hidden md:block absolute left-[-1rem] top-1 bottom-1 w-[1px] bg-[#1E293B] group-hover:bg-[#D4AF37]/50 transition-colors" />
 
-                                    <h3 className="text-[#D4AF37] font-marcellus text-lg md:text-xl tracking-wide">
+                                    <h3 className="text-[#D4AF37] font-serif font-normal text-lg md:text-xl tracking-wide">
                                         {card.title}
                                     </h3>
                                     <p className="text-gray-300 font-tess text-base md:text-lg font-light leading-relaxed">

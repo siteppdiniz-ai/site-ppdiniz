@@ -55,13 +55,10 @@ export function AboutPhilosophy() {
                         {/* 1. SVG Pie Slices (The Fan) with Embedded Icons */}
                         <svg viewBox="0 0 200 100" className="absolute top-0 left-0 w-full h-full overflow-visible drop-shadow-2xl">
                             <defs>
-                                <linearGradient id="philo-gold1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stopColor="#8B6B2B" />
-                                    <stop offset="100%" stopColor="#D4AF37" />
-                                </linearGradient>
-                                <linearGradient id="philo-gold2" x1="0%" y1="100%" x2="100%" y2="0%">
-                                    <stop offset="0%" stopColor="#695227" />
-                                    <stop offset="100%" stopColor="#B78E45" />
+                                <linearGradient id="philo-gold-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stopColor="#FFDB99" />
+                                    <stop offset="50%" stopColor="#B78E45" />
+                                    <stop offset="100%" stopColor="#715118" />
                                 </linearGradient>
                             </defs>
 
@@ -74,7 +71,7 @@ export function AboutPhilosophy() {
                                 {/* Slice with gap */}
                                 <path
                                     d="M 98 2 L 2 2 A 96 96 0 0 0 30 70 Z"
-                                    fill="#B78E45"
+                                    fill="url(#philo-gold-gradient)"
                                 />
                                 {/* Embedded Icon - Centered based on provided margins */}
                                 <image
@@ -93,7 +90,7 @@ export function AboutPhilosophy() {
                                 {/* Slice with gap */}
                                 <path
                                     d="M 98 2 L 32 72 A 96 96 0 0 0 98 98 Z"
-                                    fill="#D4AF37"
+                                    fill="url(#philo-gold-gradient)"
                                 />
                                 {/* Embedded Icon - Centered based on mirrored coords */}
                                 <image
@@ -112,7 +109,7 @@ export function AboutPhilosophy() {
                                 {/* Slice with gap */}
                                 <path
                                     d="M 102 2 L 102 98 A 96 96 0 0 0 168 72 Z"
-                                    fill="#D4AF37"
+                                    fill="url(#philo-gold-gradient)"
                                 />
                                 {/* Embedded Icon - Centered based on mirrored coords */}
                                 <image
@@ -131,7 +128,7 @@ export function AboutPhilosophy() {
                                 {/* Slice with gap */}
                                 <path
                                     d="M 102 2 L 170 70 A 96 96 0 0 0 198 2 Z"
-                                    fill="#B78E45"
+                                    fill="url(#philo-gold-gradient)"
                                 />
                                 {/* Embedded Icon - Centered based on mirrored coords */}
                                 <image
@@ -142,15 +139,17 @@ export function AboutPhilosophy() {
                             </g>
                         </svg>
 
-                        {/* 2. Central Dark Circle (Scaled Down) */}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110px] h-[110px] md:w-[196px] md:h-[196px] lg:w-[266px] lg:h-[266px] rounded-full bg-[#0B1120] border-4 border-[#D4AF37] flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.6)] z-20">
-                            <div className="relative w-[60%] h-[60%]">
-                                <Image
-                                    src="/assets/logo.png"
-                                    alt="PPDiniz Consultoria"
-                                    fill
-                                    className="object-contain"
-                                />
+                        {/* 2. Central Dark Circle with Gradient Border (Scaled Down) */}
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110px] h-[110px] md:w-[196px] md:h-[196px] lg:w-[266px] lg:h-[266px] rounded-full p-[1.5px] md:p-[2px] z-20 shadow-[0_10px_30px_rgba(0,0,0,0.6)]" style={{ background: 'linear-gradient(180deg, #FFDB99 0%, #B78E45 50%, #715118 100%)' }}>
+                            <div className="w-full h-full rounded-full bg-[#0B1120] flex items-center justify-center">
+                                <div className="relative w-[60%] h-[60%]">
+                                    <Image
+                                        src="/assets/logo.png"
+                                        alt="PPDiniz Consultoria"
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
                             </div>
                         </div>
 
@@ -250,7 +249,7 @@ function PhilosophyCard({ title, content, isWide = false }: { title: string, con
         <div className={`relative bg-[#0F1522] border border-[#1E293B] rounded-xl p-6 md:p-8 pt-10 md:pt-12 shadow-lg hover:border-[#D4AF37]/40 hover:-translate-y-2 hover:shadow-[#D4AF37]/5 transition-all duration-300 group ${isWide ? 'text-center' : ''} cursor-default`}>
             {/* The "Tab" title */}
             <div className="absolute top-0 left-4 md:left-6 -translate-y-1/2 bg-[#B78E45] group-hover:bg-[#D4AF37] px-4 py-1.5 rounded-sm transition-colors duration-300">
-                <span className="text-[#0B1120] font-serif font-bold text-sm tracking-widest uppercase">
+                <span className="text-[#0B1120] font-serif font-normal text-sm tracking-widest uppercase">
                     {title}
                 </span>
             </div>

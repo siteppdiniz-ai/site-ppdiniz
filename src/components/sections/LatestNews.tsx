@@ -20,7 +20,7 @@ export async function LatestNews() {
                             <span className="block text-[#D4AF37] font-mate text-lg md:text-xl uppercase tracking-[0.2em] mb-4">
                                 Fique por Dentro
                             </span>
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-marcellus text-white leading-tight">
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-white leading-tight">
                                 Últimas Notícias e <br className="hidden md:block" />
                                 <span className="bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent">Atualizações</span>
                             </h2>

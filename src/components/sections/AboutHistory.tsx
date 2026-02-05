@@ -3,14 +3,14 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function AboutHistory() {
     return (
-        <section className="relative w-full min-h-[calc(100vh-6rem)] lg:h-[calc(100vh-6rem)] h-auto pt-8 md:pt-8 flex flex-col items-center bg-[#0B1120] overflow-hidden py-12 lg:py-0">
+        <section className="relative w-full min-h-[calc(100vh-6rem)] lg:h-[calc(100vh-6rem)] h-auto pt-8 flex flex-col items-center justify-center bg-[#0B1120] overflow-hidden py-8 lg:py-0">
 
             {/* Container */}
-            <div className="container max-w-3xl px-4 md:px-6 relative z-10 flex flex-col items-start h-full pb-8">
+            <div className="container max-w-3xl px-4 md:px-6 relative z-10 flex flex-col items-start">
 
                 {/* Title */}
                 <ScrollReveal direction="down" duration={0.8}>
-                    <h2 className="text-2xl md:text-4xl font-marcellus bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent tracking-wide mb-6 relative leading-tight pb-2">
+                    <h2 className="text-2xl md:text-4xl font-serif font-normal bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent tracking-wide mb-4 relative leading-tight pb-2">
                         COMO NASCEU A PPDINIZ
                         {/* Decorative Underline / Mask */}
                         <div className="absolute left-0 -bottom-1 w-[80%] h-[2px] rounded-full bg-gradient-to-r from-[#D4AF37] via-[#D4AF37] to-transparent opacity-80" />
@@ -18,7 +18,7 @@ export function AboutHistory() {
                 </ScrollReveal>
 
                 {/* Content */}
-                <div className="space-y-3 md:space-y-4 font-tess text-sm md:text-base text-gray-300 font-light leading-relaxed text-left flex-1">
+                <div className="space-y-2 md:space-y-3 font-tess text-xs md:text-sm text-gray-300 font-light leading-relaxed text-left">
                     <ScrollReveal direction="left" delay={0.2}>
                         <p>
                             Pedro Paulo A. Diniz é contador, especialista em Gestão Financeira, Controladoria e Auditoria; Gestão Empresarial e Inovação. Atualmente mestrando em contabilidade e administração. Sua trajetória profissional começou em 1990, quando iniciou sua carreira na contabilidade. Em 1996, fundou a Revit, sua primeira empresa de assessoria contábil, que se consolidou como referência no setor.
@@ -44,14 +44,14 @@ export function AboutHistory() {
                     </ScrollReveal>
 
                     <ScrollReveal direction="up" delay={0.6}>
-                        <p className="border-l-2 border-[#D4AF37]/50 pl-6 text-white font-normal italic">
+                        <p className="border-l-2 border-[#D4AF37]/50 pl-4 text-white font-normal italic text-xs md:text-sm">
                             Se sua empresa enfrenta dificuldades como falta de organização financeira, carga tributária elevada ou desafios para crescer de forma estruturada, a PP Diniz Consultoria pode ajudar. Entre em contato e descubra como transformar sua gestão empresarial com estratégias eficientes e seguras.
                         </p>
                     </ScrollReveal>
 
-                    <ScrollReveal direction="up" delay={0.8} className="pt-6">
+                    <ScrollReveal direction="up" delay={0.8} className="pt-4">
                         <Link href="/contato">
-                            <button className="px-8 py-3 bg-[#B78E45] hover:bg-[#D4AF37] text-black font-serif font-bold text-base rounded-sm shadow-lg hover:shadow-[#D4AF37]/20 transition-all duration-300 uppercase tracking-widest">
+                            <button className="px-6 py-2.5 bg-[#B78E45] hover:bg-[#D4AF37] text-black font-serif font-normal text-sm rounded-sm shadow-lg hover:shadow-[#D4AF37]/20 transition-all duration-300 uppercase tracking-widest">
                                 Fale com um especialista
                             </button>
                         </Link>

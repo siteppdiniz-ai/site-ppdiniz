@@ -11,7 +11,7 @@ export function WhoIsFor() {
 
                 {/* Title */}
                 <ScrollReveal direction="down" duration={0.8}>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-marcellus bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent text-center tracking-wide mb-8 md:mb-12 relative leading-tight px-4">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal bg-[linear-gradient(112.83deg,#D5A756_3.2%,#695227_112.07%)] bg-clip-text text-transparent text-center tracking-wide mb-8 md:mb-12 relative leading-tight px-4">
                         PARA QUEM É A PPDiniz
                         {/* Decorative Underline / Mask */}
                         <div className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-[110%] min-w-[300px] h-[4px] rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-80" />
@@ -21,14 +21,10 @@ export function WhoIsFor() {
                 {/* Subtitle / Banner */}
                 <ScrollReveal direction="left" delay={0.2} width="100%">
                     <div className="relative mb-10 lg:mb-12 flex justify-center w-full">
-                        <div className="relative inline-block">
-                            {/* Ribbon Background Shape */}
-                            <div className="absolute inset-0 bg-[#B78E45] rounded-tl-[40px] rounded-br-[40px] shadow-lg opacity-90" />
-                            <div className="relative px-6 py-3 md:px-12 md:py-3">
-                                <p className="text-[#0B1120] font-serif font-bold text-lg md:text-xl tracking-wide text-center leading-tight">
-                                    Se você percebe que sua empresa...
-                                </p>
-                            </div>
+                        <div className="bg-[#B78E45] hover:bg-[#D4AF37] rounded-tl-[20px] rounded-br-[20px] shadow-lg transition-all duration-300 px-8 py-4 md:px-12 md:py-4 cursor-default">
+                            <span className="text-black font-serif font-normal text-base uppercase tracking-widest">
+                                Se você percebe que sua empresa...
+                            </span>
                         </div>
                     </div>
                 </ScrollReveal>

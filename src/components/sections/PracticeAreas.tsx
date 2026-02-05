@@ -38,7 +38,7 @@ export function PracticeAreas() {
         <section id="areas" className="py-24 bg-muted/40 relative">
             <div className="container px-4 md:px-6 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-normal text-foreground">
                         Áreas de Atuação
                     </h2>
                     <div className="w-20 h-1 bg-secondary mx-auto rounded-full" />
@@ -56,7 +56,7 @@ export function PracticeAreas() {
                             <div className="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/5 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm group-hover:shadow-md">
                                 <area.icon size={28} />
                             </div>
-                            <h3 className="text-2xl font-serif font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
+                            <h3 className="text-2xl font-serif font-normal mb-3 text-foreground group-hover:text-primary transition-colors">
                                 {area.title}
                             </h3>
                             <p className="text-muted-foreground leading-relaxed text-base">

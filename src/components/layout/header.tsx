@@ -20,10 +20,10 @@ export function Header() {
     return (
         <header className="sticky top-0 z-50 w-full bg-[#0B1120] border-b border-white/5">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="flex h-24 items-center justify-between">
+                <div className="flex h-16 lg:h-24 items-center justify-between">
                     <div className="flex items-center shrink-0">
                         <Link href="/" className="flex items-center gap-3">
-                            <div className="relative w-32 h-12">
+                            <div className="relative w-28 h-10 lg:w-32 lg:h-12">
                                 <Image
                                     src="/assets/logo.png"
                                     alt="PPDiniz Consultoria"

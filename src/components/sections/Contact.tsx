@@ -16,7 +16,7 @@ export function Contact() {
 
                         {/* Left Side: Form */}
                         <div className="flex-1 p-6 md:p-10 lg:p-12 flex flex-col justify-center">
-                            <h1 className="text-2xl md:text-3xl font-marcellus text-[#D4AF37] mb-6 lg:mb-8 tracking-wider uppercase">
+                            <h1 className="text-2xl md:text-3xl font-serif font-normal text-[#D4AF37] mb-6 lg:mb-8 tracking-wider uppercase">
                                 Fale conosco
                             </h1>
 
