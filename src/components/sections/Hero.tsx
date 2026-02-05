@@ -69,9 +69,9 @@ export function Hero() {
           >
             <h1 className="font-serif leading-[1.15] tracking-wide w-full">
               {/* Unified Typography - Gold gradient text */}
-              <span className="block font-normal mb-1.5 text-xl tracking-widest uppercase whitespace-nowrap bg-[linear-gradient(90deg,#715118_0%,#B78E45_50%,#FFDB99_100%)] bg-clip-text text-transparent">EMPRESA QUE</span>
-              <span className="block font-normal text-xl mb-0.5 whitespace-nowrap bg-[linear-gradient(90deg,#715118_0%,#B78E45_50%,#FFDB99_100%)] bg-clip-text text-transparent">SE GOVERNA,</span>
-              <span className="block font-normal text-xl whitespace-nowrap bg-[linear-gradient(90deg,#715118_0%,#B78E45_50%,#FFDB99_100%)] bg-clip-text text-transparent">DURA MAIS.</span>
+              <span className="block font-normal mb-1.5 text-xl tracking-widest uppercase whitespace-nowrap bg-[linear-gradient(90deg,#FFDB99_0%,#B78E45_50%,#715118_100%)] bg-clip-text text-transparent">EMPRESA QUE</span>
+              <span className="block font-normal text-xl mb-0.5 whitespace-nowrap bg-[linear-gradient(90deg,#FFDB99_0%,#B78E45_50%,#715118_100%)] bg-clip-text text-transparent">SE GOVERNA,</span>
+              <span className="block font-normal text-xl whitespace-nowrap bg-[linear-gradient(90deg,#FFDB99_0%,#B78E45_50%,#715118_100%)] bg-clip-text text-transparent">DURA MAIS.</span>
             </h1>
 
             {/* CTA Button - Below text */}
@@ -175,8 +175,7 @@ export function Hero() {
               <div className="space-y-2">
                 <ScrollReveal direction="left" delay={0.3}>
                   <h1
-                    className="text-3xl md:text-4xl lg:text-5xl font-serif font-normal tracking-tight text-transparent bg-clip-text leading-[1.1]"
-                    style={{ backgroundImage: 'linear-gradient(97.56deg, #FFDB99 -10.28%, #B78E45 84.61%)' }}
+                    className="text-3xl md:text-4xl lg:text-5xl font-serif font-normal tracking-tight text-transparent bg-clip-text leading-[1.1] bg-[linear-gradient(90deg,#FFDB99_0%,#B78E45_50%,#715118_100%)]"
                   >
                     <span className="block mb-1">EMPRESA QUE SE</span>
                     GOVERNA, DURA MAIS.
