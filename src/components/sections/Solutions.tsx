@@ -40,7 +40,7 @@ export function Solutions() {
             {/* Top Gradient Separator */}
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-50" />
 
-            <div className="container px-4 md:px-6 relative z-10 flex flex-col h-full justify-center">
+            <div className="container px-6 md:px-12 lg:px-[140px] relative z-10 flex flex-col h-full justify-center">
 
                 {/* Header Section */}
                 <div className="text-center mb-8 lg:mb-16 relative flex flex-col items-center">

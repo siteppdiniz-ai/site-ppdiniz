@@ -11,7 +11,7 @@ export async function LatestNews() {
 
     return (
         <section className="bg-[#0B1120] py-20 lg:py-32 overflow-hidden">
-            <div className="container px-4 md:px-6 mx-auto max-w-7xl">
+            <div className="container px-6 md:px-12 lg:px-[140px] mx-auto max-w-7xl">
 
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6">

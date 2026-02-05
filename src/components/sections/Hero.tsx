@@ -152,24 +152,26 @@ export function Hero() {
       {/* =========================================
           DESKTOP LAYOUT (>= 1024px)
           ========================================= */}
-      <div className="hidden lg:block container relative z-10 px-4 md:px-6 lg:px-16 h-full py-4 lg:py-0">
+      <div className="hidden lg:block container relative z-10 px-4 md:px-6 lg:px-[140px] h-full lg:pt-16 lg:pb-8">
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-16 items-start lg:items-center h-full">
           {/* Text Content */}
-          <div className="flex gap-8 items-stretch pt-0 lg:pt-0 relative z-10 -ml-8">
-            {/* Decorative Divider */}
-            <ScrollReveal
-              direction="down"
-              duration={1}
-              delay={0.2}
-              className="flex flex-col items-center self-stretch"
-              innerClassName="flex flex-col items-center h-full"
-              height="100%"
-              overflow="visible"
-            >
-              <div className="w-[1px] bg-[#D4AF37] flex-1 min-h-[180px]" style={{ background: 'linear-gradient(to bottom, transparent, #D4AF37 10%, #D4AF37)' }} />
-              <div className="w-2 md:w-2.5 h-2 md:h-2.5 bg-[#D4AF37] rotate-45 my-4 shrink-0" />
-              <div className="w-[1px] bg-[#D4AF37] flex-1 min-h-[180px]" style={{ background: 'linear-gradient(to top, transparent, #D4AF37 10%, #D4AF37)' }} />
-            </ScrollReveal>
+          <div className="flex flex-col pt-0 lg:pt-0 relative z-10">
+            {/* Decorative Divider - Centered in the 140px margin (at 70px from border) */}
+            <div className="absolute -left-[70px] top-0 bottom-0 flex items-center justify-center -translate-x-1/2 pointer-events-none">
+              <ScrollReveal
+                direction="down"
+                duration={1}
+                delay={0.2}
+                className="flex flex-col items-center h-full"
+                innerClassName="flex flex-col items-center h-full"
+                height="100%"
+                overflow="visible"
+              >
+                <div className="w-[1px] bg-[#D4AF37] flex-1" style={{ background: 'linear-gradient(to bottom, transparent, #D4AF37 10%, #D4AF37)' }} />
+                <div className="w-2 md:w-2.5 h-2 md:h-2.5 bg-[#D4AF37] rotate-45 my-4 shrink-0" />
+                <div className="w-[1px] bg-[#D4AF37] flex-1" style={{ background: 'linear-gradient(to top, transparent, #D4AF37 10%, #D4AF37)' }} />
+              </ScrollReveal>
+            </div>
 
             <div className="space-y-4 md:space-y-8 flex flex-col py-2">
               <div className="space-y-2">

@@ -3,11 +3,15 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const pathname = usePathname();
+    const isHome = pathname === '/';
 
     const navigation = [
         { name: 'INÍCIO', href: '/' },
@@ -19,7 +23,11 @@ export function Header() {
 
     return (
         <header className="sticky top-0 z-50 w-full bg-[#0B1120] border-b border-white/5">
-            <div className="container mx-auto px-4 md:px-6">
+            <div className={cn(
+                "container transition-all duration-300",
+                !isHome && "mx-auto",
+                isHome ? "px-6 md:px-12 lg:px-[140px]" : "px-4 md:px-6"
+            )}>
                 <div className="flex h-16 lg:h-24 items-center justify-between">
                     <div className="flex items-center shrink-0">
                         <Link href="/" className="flex items-center gap-3">

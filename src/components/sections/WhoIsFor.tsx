@@ -7,7 +7,7 @@ export function WhoIsFor() {
         <section className="relative w-full h-auto flex flex-col items-center pt-8 pb-16 md:pt-16 lg:pt-20 bg-[#0B1120] overflow-hidden lg:pb-16">
 
             {/* Container */}
-            <div className="container px-4 md:px-6 relative z-10 flex flex-col items-center">
+            <div className="container px-6 md:px-12 lg:px-[140px] relative z-10 flex flex-col items-center">
 
                 {/* Title */}
                 <ScrollReveal direction="down" duration={0.8}>

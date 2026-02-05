@@ -6,7 +6,7 @@ export function HowWeHelp() {
         <section className="relative w-full h-auto min-h-[700px] lg:h-[calc(100vh-6rem)] flex flex-col items-center justify-center bg-[#0B1120] overflow-hidden py-12 lg:py-0">
 
             {/* Container */}
-            <div className="container px-4 md:px-6 relative z-10 flex flex-col items-center">
+            <div className="container px-6 md:px-12 lg:px-[140px] relative z-10 flex flex-col items-center">
 
                 {/* Title */}
                 <ScrollReveal direction="down" duration={0.8}>
