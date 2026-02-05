@@ -156,8 +156,8 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-16 items-start lg:items-center h-full">
           {/* Text Content */}
           <div className="flex flex-col pt-0 lg:pt-0 relative z-10">
-            {/* Decorative Divider - Centered in the 140px margin (at 70px from border) */}
-            <div className="absolute -left-[70px] top-0 bottom-0 flex items-center justify-center -translate-x-1/2 pointer-events-none">
+            {/* Decorative Divider - 35px from the text (at 105px from border) */}
+            <div className="absolute -left-[35px] top-0 bottom-0 flex items-center justify-center pointer-events-none">
               <ScrollReveal
                 direction="down"
                 duration={1}
