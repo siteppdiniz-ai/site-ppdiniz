@@ -13,99 +13,97 @@ export function Hero() {
       {/* =========================================
           MOBILE LAYOUT (< 1024px)
           ========================================= */}
-      <div className="lg:hidden w-full flex flex-col relative z-10 pt-2 pb-12 overflow-x-hidden">
+      <div className="lg:hidden w-full flex flex-col relative z-10 overflow-x-hidden">
 
-        {/* Top Section: Image + Title + CTA */}
-        <div className="pl-4 pr-1 flex flex-row items-center gap-3 mb-4 w-full">
+        {/* Unified Content Block - Equal padding, min 50px vertical */}
+        <div className="px-[5vw] py-[max(50px,5vw)]">
+          {/* Content Row: Image + Title + CTA */}
+          <div className="flex flex-row items-start gap-3 w-full">
 
-          {/* Unified Image Group - All elements scale together */}
-          <div className="relative w-[38%] h-[210px] shrink-0 flex items-end justify-center -translate-x-2">
-            {/* Single container for all elements - scales proportionally */}
-            <div className="absolute inset-0 z-0">
-              {/* 1. Outline Shape (Back) */}
-              <div className="absolute bottom-0 right-[-20%] w-[95%] h-full opacity-100 mix-blend-normal">
-                <Image
-                  src="/assets/hero/shape-outline.png"
-                  alt="Background Outline"
-                  fill
-                  className="object-contain object-bottom"
-                />
+            {/* Unified Image Group - All elements scale together */}
+            <div className="relative w-[38%] h-[210px] shrink-0 flex items-end justify-center -translate-x-2 mt-[-60px]">
+              {/* Single container for all elements - scales proportionally */}
+              <div className="absolute inset-0 z-0">
+                {/* 1. Outline Shape (Back) */}
+                <div className="absolute bottom-0 right-[-20%] w-[95%] h-[85%] opacity-100 mix-blend-normal">
+                  <Image
+                    src="/assets/hero/shape-outline.png"
+                    alt="Background Outline"
+                    fill
+                    className="object-contain object-bottom"
+                  />
+                </div>
+                {/* 2. Filled Shape (Middle) */}
+                <div className="absolute bottom-0 right-[-15%] w-[90%] h-[85%] opacity-100">
+                  <Image
+                    src="/assets/hero/shape-blue-filled.png"
+                    alt="Background Shape"
+                    fill
+                    className="object-contain object-bottom"
+                  />
+                </div>
               </div>
-              {/* 2. Filled Shape (Middle) */}
-              <div className="absolute bottom-0 right-[-15%] w-[90%] h-[92%] opacity-100">
+
+              {/* 3. Portrait Cutout (Front) - Same proportional size */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="relative z-10 w-[75%] h-[85%] translate-x-5"
+              >
                 <Image
-                  src="/assets/hero/shape-blue-filled.png"
-                  alt="Background Shape"
+                  src="/assets/hero/portrait.png"
+                  alt="Dr. Diniz"
                   fill
-                  className="object-contain object-bottom"
+                  className="object-contain object-bottom drop-shadow-2xl"
+                  priority
                 />
-              </div>
+              </motion.div>
             </div>
 
-            {/* 3. Portrait Cutout (Front) - Same proportional size */}
+            {/* Title + CTA Column */}
+            {/* Shifted right with padding */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative z-10 w-[75%] h-[85%] translate-x-5"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex-1 z-20 flex flex-col items-start justify-between min-w-0 pl-4 h-[150px]"
             >
-              <Image
-                src="/assets/hero/portrait.png"
-                alt="Dr. Diniz"
-                fill
-                className="object-contain object-bottom drop-shadow-2xl"
-                priority
-              />
+              <h1 className="font-serif leading-[1.15] tracking-wide w-full">
+                {/* Unified Typography - Gold gradient text */}
+                <span className="block font-normal mb-1.5 text-xl tracking-widest uppercase whitespace-nowrap bg-[linear-gradient(90deg,#FFDB99_0%,#B78E45_50%,#715118_100%)] bg-clip-text text-transparent">EMPRESA QUE</span>
+                <span className="block font-normal text-xl mb-0.5 whitespace-nowrap bg-[linear-gradient(90deg,#FFDB99_0%,#B78E45_50%,#715118_100%)] bg-clip-text text-transparent">SE GOVERNA,</span>
+                <span className="block font-normal text-xl whitespace-nowrap bg-[linear-gradient(90deg,#FFDB99_0%,#B78E45_50%,#715118_100%)] bg-clip-text text-transparent">DURA MAIS.</span>
+              </h1>
+
+              {/* CTA Button - Below text */}
+              <div className="w-full">
+                <Link href="/contato" className="block w-full max-w-[130px]">
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="relative w-full h-12 bg-[#0F172A]/90 border border-blue-900/30 rounded-lg shadow-lg flex items-center justify-center overflow-hidden group hover:border-[#D4AF37]/50 transition-colors backdrop-blur-sm"
+                  >
+                    <Image
+                      src="/assets/hero/logo-gold.png"
+                      alt="PP Diniz"
+                      width={70}
+                      height={22}
+                      className="object-contain w-auto h-7 opacity-100"
+                    />
+                  </motion.div>
+                </Link>
+              </div>
             </motion.div>
           </div>
-
-          {/* Title + CTA Column */}
-          {/* Shifted right with padding */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex-1 z-20 flex flex-col items-start min-w-0 pl-4 pt-1"
-          >
-            <h1 className="font-serif leading-[1.15] tracking-wide w-full">
-              {/* Unified Typography - Gold gradient text */}
-              <span className="block font-normal mb-1.5 text-xl tracking-widest uppercase whitespace-nowrap bg-[linear-gradient(90deg,#FFDB99_0%,#B78E45_50%,#715118_100%)] bg-clip-text text-transparent">EMPRESA QUE</span>
-              <span className="block font-normal text-xl mb-0.5 whitespace-nowrap bg-[linear-gradient(90deg,#FFDB99_0%,#B78E45_50%,#715118_100%)] bg-clip-text text-transparent">SE GOVERNA,</span>
-              <span className="block font-normal text-xl whitespace-nowrap bg-[linear-gradient(90deg,#FFDB99_0%,#B78E45_50%,#715118_100%)] bg-clip-text text-transparent">DURA MAIS.</span>
-            </h1>
-
-            {/* CTA Button - Below text */}
-            <div className="mt-4 w-full">
-              <Link href="/contato" className="block w-full max-w-[130px]">
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className="relative w-full h-12 bg-[#0F172A]/90 border border-blue-900/30 rounded-lg shadow-lg flex items-center justify-center overflow-hidden group hover:border-[#D4AF37]/50 transition-colors backdrop-blur-sm"
-                >
-                  <Image
-                    src="/assets/hero/logo-gold.png"
-                    alt="PP Diniz"
-                    width={70}
-                    height={22}
-                    className="object-contain w-auto h-7 opacity-100"
-                  />
-                </motion.div>
-              </Link>
-            </div>
-          </motion.div>
         </div>
 
         {/* Gold Divider Strip with gradient */}
         <div
-          className="relative w-[110%] -ml-6 h-[8px] mb-8 shadow-[0_0_20px_rgba(212,175,55,0.2)] flex items-center mt-2"
+          className="relative w-[110%] -ml-6 h-[8px] mb-8 shadow-[0_0_20px_rgba(212,175,55,0.2)] flex items-center mt-0"
           style={{ background: 'linear-gradient(90deg, #715118 0%, #B78E45 50%, #FFDB99 100%)' }}
         >
-          <div className="container mx-auto px-6 relative h-full flex items-center">
-            {/* The 'bar in the middle' effect - slightly lighter overlay */}
-            <div className="w-[40%] h-[2px] bg-[#FFDB99] opacity-70 absolute left-6 top-1/2 -translate-y-1/2 rounded-full" />
-          </div>
-
           {/* Right side decorative polygon - Gradient matching line continuation */}
           <div
             className="absolute right-0 top-1/2 -translate-y-1/2 h-[30px] w-24 shadow-lg"
