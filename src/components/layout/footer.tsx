@@ -96,6 +96,10 @@ export async function Footer() {
                         <Link href="/politica-cookies" className="hover:text-[#D4AF37] underline underline-offset-4 decoration-[#D4AF37]/30">
                             Política de Cookies
                         </Link>
+                        <span className="hidden md:inline">|</span>
+                        <span>
+                            Created by <a href="https://moa.software" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] font-semibold transition-colors">MOA SOFTWARE</a>
+                        </span>
                     </div>
                 </div>
             </div>
